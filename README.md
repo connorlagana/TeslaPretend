@@ -79,6 +79,17 @@ src
       |__ Footer.jsx
 ```
 
+#### Component Estimates
+
+> Use this section to estimate the time necessary to build out each of the components you've described above.
+
+| Task              | Priority | Estimated Time | Time Invested | Actual Time |
+| ----------------- | :------: | :------------: | :-----------: | :---------: |
+| Rails Backend     |    H     |     12 hrs     |     2 hrs     |     TBD     |
+| Add car to garage |    H     |     24 hrs     |     1 hrs     |     TBD     |
+| Garage list       |    H     |     12 hrs     |     0 hrs     |     TBD     |
+| TOTAL             |          |     48 hrs     |     3 hrs     |     TBD     |
+
 <br>
 
 ---
