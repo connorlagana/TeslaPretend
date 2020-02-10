@@ -1,24 +1,47 @@
 import React from "react";
+import teslaWhite from "../../images/teslaWhite.svg";
+import Menu from "@material-ui/icons/Menu";
 
 const NavBar = () => {
   return (
     <div className="Nav">
-      <nav>
-        <ul id="nav">
-          <a href="/about" className="navItem">
-            About
+      <div className="leftNav">
+        <img src={teslaWhite} id="teslaWhite" />
+      </div>
+      <div className="midNav">
+        <ul className="mainNavComps">
+          <a href="/modelS" className="navItem">
+            Model S
           </a>
-          <a href="/technologies" className="navItem">
-            Technologies
+          <a href="/model3" className="navItem">
+            Model 3
           </a>
-          <a href="/projects" className="navItem">
-            Projects
+          <a href="/modelX" className="navItem">
+            Model X
           </a>
-          <a href="/contact" className="navItem">
-            Contact
+          <a href="/modelY" className="navItem">
+            Model Y
+          </a>
+          <a href="/cybertruck" className="navItem">
+            Cybertruck
+          </a>
+          <a href="/roadster" className="navItem">
+            Roadster
+          </a>
+          <a href="/energy" className="navItem">
+            Energy
           </a>
         </ul>
-      </nav>
+      </div>
+      <div className="rightNav">
+        <a href="/about" className="navItem">
+          Shop
+        </a>
+        <a href="/technologies" className="navItem">
+          Sign In
+        </a>
+        <Menu id="hamburgerMenu" />
+      </div>
     </div>
   );
 };

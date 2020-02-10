@@ -3,8 +3,108 @@
   height: 100vh;
   object-fit: cover;
   z-index: -1;
+  position: fixed;
+}
+
+#teslaWhite {
 }
 
 .Nav {
   z-index: 1;
+  display: flex;
+  justify-content: space-between;
+  margin-left: 2vw;
+  margin-right: 2vw;
+  align-items: center;
+}
+
+.mainNavComps {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.navItem {
+  margin-left: 1vw;
+  margin-right: 1vw;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 900;
+  font-style: normal;
+  text-transform: uppercase;
+  text-decoration: none;
+  color: white;
+}
+
+.navItem:hover {
+  color: rgb(199, 200, 204);
+}
+
+.rightNav {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#hamburgerMenu {
+  color: white;
+}
+
+.centerConsole {
+  /* background-color: aqua; */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  font-family: "Montserrat", sans-serif;
+  margin-top: 10vh;
+}
+
+.centerConsole h1 {
+  font-weight: 900;
+  color: white;
+  font-size: 40px;
+}
+
+.centerConsole button {
+  width: 14vw;
+  height: 4vh;
+  border-radius: 3vw;
+  box-shadow: none;
+  border: none;
+  margin: 1vh;
+  font-size: 13px;
+  font-family: "Montserrat", sans-serif;
+  cursor: pointer;
+  text-transform: uppercase;
+}
+
+#customOrder {
+  color: black;
+  background-color: white;
+}
+
+#existingInventory {
+  color: white;
+  background-color: rgba(0, 0, 0, 0);
+  border: solid;
+  border-color: white;
+  transition: all 0.5s;
+}
+
+#existingInventory:hover {
+  color: black;
+  background-color: white;
+}
+
+.centerConsole p {
+  color: white;
+  border: solid;
+  border-color: white;
+  border-width: 0px;
+  border-bottom-width: 1px;
+  font-size: 14px;
+  cursor: pointer;
+}
+.centerConsole p:hover {
+  border-bottom-width: 2px;
 }
