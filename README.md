@@ -10,19 +10,19 @@ https://www.youtube.com/watch?v=WIrWyr3HgXI
 
 ### Wireframes
 
-![Desktop Landing](https://i.imgur.com/U3oiNU7.png)
+![Desktop Landing](https://i.imgur.com/8apoqDA.png)
 
 - Desktop Landing
 
 <br>
 
-![Desktop Hero](https://i.imgur.com/cSFd1ZJ.png)
+![Desktop Hero](https://i.imgur.com/CG6I5Xz.png)
 
 - Desktop Hero
 
 <br>
 
-![Mobile Data Index](https://i.imgur.com/XpZs5T6.png)
+![Mobile Data Index]()
 
 - Mobile Data Index
 
@@ -34,50 +34,30 @@ https://www.youtube.com/watch?v=WIrWyr3HgXI
 
 structure
 src
-|__ assets/
-     |__ fonts
-     |__ images
-     |__ mockups
-|__ components/
-     |__ Header.jsx
-     |__ Footer.jsx
-     |__ Hero.jsx
-     |__ UserPage.jsx
-     |__ Car.jsx
-     |__ BuyCar.jsx
-     |__ Garage.jsx
-     |__ Login.jsx
-     |__ Signup.jsx
-|__ services/
+|** assets/
+|** fonts
+|** images
+|** mockups
+|** components/
+|** Header.jsx
+|** Footer.jsx
+|** Nav.jsx
+|** UserPage.jsx
+|** Car.jsx
+|** BuyCar.jsx
+|** Garage.jsx
+|** Login.jsx
+|** Signup.jsx
+|\_\_ services/
 
 ### MVP
 
-\_The **sendit™** MVP is accessing a financial API and news API and sort them by Stock ticker associated with news.
+\_The **PretendTesla™** MVP is accessing a Ruby on Rails backend and displaying access to customized cars that a logged in user selects from.
 
 #### Goals
 
-- Utilize CSS
-- Learn advanced API's (possibly OAuth)
-- Upvotes
-- Sort posts by upvoted
-
-#### Libraries
-
-> Use this section to list all supporting libraries and their role in the project.
-
-|   Library    | Description              |
-| :----------: | :----------------------- |
-| React Router | Used to route with react |
-|    Axios     | Used for API calls       |
-| Font awesome | No explanation needed    |
-
-#### API Data
-
-> Use the Data Section to define the API(s) you will be consuming for your project, inluding sample URL queries.
-
-|        API         | Quality Docs? | Website              | Sample Query |
-| :----------------: | :-----------: | :------------------- | :----------- |
-| Intrinio/StockNews |      yes      | https://intrinio.com |              |
+- Update garage
+- Ruby on rails backend
 
 #### React Components
 
@@ -109,6 +89,6 @@ src
 
 #### Post-MVP Goals
 
-- Sort posts by upvotes
-- different communites (subsends)
-- search for stocks
+- Sort cars
+- Add/Update/Delete
+- Multiple models of cars
