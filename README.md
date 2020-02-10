@@ -32,6 +32,24 @@ https://www.youtube.com/watch?v=WIrWyr3HgXI
 
 <br>
 
+structure
+src
+|__ assets/
+     |__ fonts
+     |__ images
+     |__ mockups
+|__ components/
+     |__ Header.jsx
+     |__ Footer.jsx
+     |__ Hero.jsx
+     |__ UserPage.jsx
+     |__ Car.jsx
+     |__ BuyCar.jsx
+     |__ Garage.jsx
+     |__ Login.jsx
+     |__ Signup.jsx
+|__ services/
+
 ### MVP
 
 \_The **sendit™** MVP is accessing a financial API and news API and sort them by Stock ticker associated with news.
