@@ -1,7 +1,7 @@
 import React from "react";
 import mainHeroNarrow from "../../images/mainHeroNarrow.jpg";
 
-const firstHomePage = () => {
+const FirstHomePage = () => {
   return (
     <div>
       <img src={mainHeroNarrow} id="mainHero"/>
@@ -9,4 +9,4 @@ const firstHomePage = () => {
   );
 };
 
-export default firstHomePage;
+export default FirstHomePage;

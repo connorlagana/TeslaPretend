@@ -4,3 +4,7 @@
   object-fit: cover;
   z-index: -1;
 }
+
+.Nav {
+  z-index: 1;
+}

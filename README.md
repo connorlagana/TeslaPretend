@@ -1,68 +1,96 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+# **sendit**
 
-## Available Scripts
+### Overview
 
-In the project directory, you can run:
+https://www.youtube.com/watch?v=WIrWyr3HgXI
 
-### `yarn start`
+**PretendTesla™** is the official unofficial mock Tesla website used to buy Tesla cars! **PretendTesla™** will use a ruby on rails backend server to add, update, and delete existing cars from your list.
 
-Runs the app in the development mode.<br />
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+<br>
 
-The page will reload if you make edits.<br />
-You will also see any lint errors in the console.
+### Wireframes
 
-### `yarn test`
+![Desktop Landing](https://i.imgur.com/U3oiNU7.png)
 
-Launches the test runner in the interactive watch mode.<br />
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+- Desktop Landing
 
-### `yarn build`
+<br>
 
-Builds the app for production to the `build` folder.<br />
-It correctly bundles React in production mode and optimizes the build for the best performance.
+![Desktop Hero](https://i.imgur.com/cSFd1ZJ.png)
 
-The build is minified and the filenames include the hashes.<br />
-Your app is ready to be deployed!
+- Desktop Hero
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+<br>
 
-### `yarn eject`
+![Mobile Data Index](https://i.imgur.com/XpZs5T6.png)
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+- Mobile Data Index
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+<br>
 
-Instead, it will copy all the configuration files and the transitive dependencies (Webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+---
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+<br>
 
-## Learn More
+### MVP
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+\_The **sendit™** MVP is accessing a financial API and news API and sort them by Stock ticker associated with news.
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+#### Goals
 
-### Code Splitting
+- Utilize CSS
+- Learn advanced API's (possibly OAuth)
+- Upvotes
+- Sort posts by upvoted
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/code-splitting
+#### Libraries
 
-### Analyzing the Bundle Size
+> Use this section to list all supporting libraries and their role in the project.
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size
+|   Library    | Description              |
+| :----------: | :----------------------- |
+| React Router | Used to route with react |
+|    Axios     | Used for API calls       |
+| Font awesome | No explanation needed    |
 
-### Making a Progressive Web App
+#### API Data
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app
+> Use the Data Section to define the API(s) you will be consuming for your project, inluding sample URL queries.
 
-### Advanced Configuration
+|        API         | Quality Docs? | Website              | Sample Query |
+| :----------------: | :-----------: | :------------------- | :----------- |
+| Intrinio/StockNews |      yes      | https://intrinio.com |              |
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/advanced-configuration
+#### React Components
 
-### Deployment
+_Component Hierarchy_
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/deployment
+> Use this section to define your React components and the data architecture of your app.
 
-### `yarn build` fails to minify
+```
+src
+|__ assets/
+      |__ images
+      |__ mockups
+|__ components/
+      |__ Header.jsx
+      |__ Main.jsx
+      |__ Post.jsx
+      |__ Stock.jsx
+      |__ Fetch.jsx
+      |__ Footer.jsx
+```
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify
+<br>
+
+---
+
+<br>
+
+### Post-MVP
+
+#### Post-MVP Goals
+
+- Sort posts by upvotes
+- different communites (subsends)
+- search for stocks
