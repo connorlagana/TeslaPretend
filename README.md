@@ -1,10 +1,10 @@
-# **sendit**
+# **PretendTesla™**
 
 ### Overview
 
-https://www.youtube.com/watch?v=WIrWyr3HgXI
-
 **PretendTesla™** is the official unofficial mock Tesla website used to buy Tesla cars! **PretendTesla™** will use a ruby on rails backend server to add, update, and delete existing cars from your list.
+
+![Elon](https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fwww.fearlessmotivation.com%2Fwp-content%2Fuploads%2F2017%2F06%2Felon-quotes-fb.jpg&f=1&nofb=1)
 
 <br>
 
