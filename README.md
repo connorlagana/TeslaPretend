@@ -22,7 +22,7 @@ https://www.youtube.com/watch?v=WIrWyr3HgXI
 
 <br>
 
-![Mobile Data Index]()
+![Mobile Data Index](https://imgur.com/f1u1iKf.png)
 
 - Mobile Data Index
 
@@ -34,20 +34,20 @@ https://www.youtube.com/watch?v=WIrWyr3HgXI
 
 structure
 src
-|** assets/
-|** fonts
-|** images
-|** mockups
-|** components/
-|** Header.jsx
-|** Footer.jsx
-|** Nav.jsx
-|** UserPage.jsx
-|** Car.jsx
-|** BuyCar.jsx
-|** Garage.jsx
-|** Login.jsx
-|** Signup.jsx
+| assets/
+| fonts
+| images
+| mockups
+| components/
+| Header.jsx
+| Footer.jsx
+| Nav.jsx
+| UserPage.jsx
+| Car.jsx
+| BuyCar.jsx
+| Garage.jsx
+| Login.jsx
+| Signup.jsx
 |\_\_ services/
 
 ### MVP
