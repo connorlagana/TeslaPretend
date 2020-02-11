@@ -37,15 +37,28 @@ const Model3Buy = () => {
         </div>
         <div className="driveTypeDiv">
           <div className="rearWheelDiv">
-            <h3>Rear Wheel Drive</h3>
+            <h3>Rear-Wheel Drive</h3>
             <button id="interiorButton">Partial Premium Interior</button>
-            <button className="typeButton">Standard Range Plus</button>
+            <button className="typeButton">
+              <p>Standard Range Plus</p>
+              <p>$33,690*</p>
+            </button>
           </div>
           <div className="rearWheelDiv">
             <h3>Dual Motor All-Wheel Drive</h3>
             <button id="interiorButton">Premium Interior</button>
-            <button className="typeButton">Standard Range Plus</button>
-            <button className="typeButton">Standard Range Plus</button>
+            <button className="typeButton">
+              <p>Long Range</p>
+              <p>$42,690*</p>
+            </button>
+            <button className="typeButton">
+              <p>Performance</p>
+              <p>$50,690*</p>
+            </button>
+            <div id="learnMorePar">
+              * Costs above include potential incentives and gas savings of
+              $6,300. <div id="learnMoreText">Learn More</div>
+            </div>
           </div>
         </div>
       </div>
