@@ -365,6 +365,7 @@ input:checked + .slider:before {
   justify-content: flex-start;
   align-items: center;
   flex-direction: row;
+  font-family: "Montserrat", sans-serif;
 }
 
 .cashDiv {
@@ -375,7 +376,15 @@ input:checked + .slider:before {
   flex-direction: row;
   width: 10vw;
   height: 10vh;
-  background-color: blue;
+  /* background-color: blue; */
+  text-transform: uppercase;
+  font-size: 1.2vh;
+}
+
+#dividerFooter {
+  height: 8vh;
+  width: 0.1vw;
+  background-color: rgb(85, 85, 85);
 }
 
 .pricesDiv {
@@ -384,8 +393,8 @@ input:checked + .slider:before {
   justify-content: center;
   align-items: center;
   flex-direction: row;
-  background-color: thistle;
-  width: 29vw;
+  /* background-color: thistle; */
+  width: 35vw;
 }
 
 .insidePricesDiv {
@@ -393,6 +402,66 @@ input:checked + .slider:before {
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  background-color: antiquewhite;
   height: 10vh;
+  width: 8vw;
+  margin: 1vw;
+}
+
+.insidePricesDiv h2 {
+  margin: 0;
+  height: 5vh;
+  width: 8vw;
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-end;
+}
+
+.insidePricesDiv p {
+  margin: 0;
+  height: 5vh;
+  width: 8vw;
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+}
+
+#estPay {
+  height: 10vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 1vw;
+}
+
+#estPay p {
+  border: solid;
+  border-width: 0px;
+  border-bottom-width: 1px;
+  cursor: pointer;
+}
+
+#estPay p:hover {
+  border-bottom-width: 2px;
+}
+
+.nextFooterClass {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  flex-direction: row;
+  width: 52vw;
+  background-color: rgb(54, 145, 145);
+}
+
+.nextFooterClass h4 {
+  margin-right: 5vw;
+  color: white;
+  text-decoration: underline;
+}
+
+#nextButton {
+  text-transform: uppercase;
+  width: 15vw;
+  height: 4vh;
+  background-color: rgb(51, 127, 247);
 }
