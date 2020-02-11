@@ -1,3 +1,7 @@
+body {
+  margin: 0;
+  padding: 0;
+}
 #mainHero {
   width: 100vw;
   height: 100vh;
@@ -467,4 +471,107 @@ input:checked + .slider:before {
   border: none;
   border-radius: 2vh;
   font-size: 1.4vh;
+}
+
+#backLoginImage {
+  object-fit: cover;
+  z-index: -1;
+  height: 100vh;
+  width: 100vw;
+  position: fixed;
+}
+
+.actualLogin {
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: "Montserrat", sans-serif;
+  box-shadow: inset 0 0 1000px black;
+}
+
+.backActLog {
+  background-color: rgb(238, 238, 238);
+  border-radius: 1.5vh;
+  height: 35vh;
+  width: 33vw;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: column;
+}
+
+.backActLog form {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  width: 28vw;
+  padding: 0;
+  margin: 0;
+}
+
+#forgotPassword {
+  width: 14vw;
+  width: 28vw;
+  color: rgb(51, 127, 247);
+}
+
+#signInDiv {
+  height: 10vh;
+  width: 28vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 3vh;
+  font-weight: 100;
+  border: solid;
+  border-color: rgb(185, 185, 185);
+  border-width: 0px;
+  border-bottom-width: 1px;
+}
+
+#emailInputLogin {
+  height: 4vh;
+  width: 27.5vw;
+  margin: 0.5vh;
+  padding: 0;
+  border-radius: 2vh;
+  box-shadow: none;
+  border: solid;
+  border-width: 1px;
+  border-color: #ccc;
+  padding-left: 10px;
+  font-size: 1.9vh;
+  color: rgb(138, 138, 138);
+  font-weight: 100;
+}
+
+#singInButton {
+  height: 4vh;
+  margin-top: 1vh;
+  width: 28vw;
+  border-radius: 2vh;
+  box-shadow: none;
+  border: none;
+  background-color: rgb(51, 127, 247);
+  color: white;
+  font-size: 1.4vh;
+  text-transform: uppercase;
+}
+
+#createAcct {
+  background-color: white;
+  width: 33vw;
+  height: 5vh;
+  border-bottom-left-radius: 2vh;
+  border-bottom-right-radius: 2vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: rgb(51, 127, 247);
+  font-size: 1.2vh;
+  cursor: pointer;
+  text-decoration: none;
 }

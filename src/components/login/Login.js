@@ -27,8 +27,34 @@ class Login extends Component {
 
   render() {
     return (
-      <div>
-        <img src={this.state.backPic} onClick={this.changeBackPic} />
+      <div className="login">
+        <img
+          src={this.state.backPic}
+          onClick={this.changeBackPic}
+          id="backLoginImage"
+        />
+        <div className="actualLogin">
+          <div className="backActLog">
+            <div id="signInDiv">Sign In</div>
+            <form>
+              <input type="email" id="emailInputLogin" placeholder="Email" />
+              <input
+                type="password"
+                id="emailInputLogin"
+                placeholder="Password"
+              />
+              <div>
+                <div id="forgotPassword">I forgot my password</div>
+              </div>
+              <button id="singInButton">Sign In</button>
+            </form>
+            <div>
+              <a id="createAcct" href="/register">
+                <div>Create Account</div>
+              </a>
+            </div>
+          </div>
+        </div>
       </div>
     );
   }
