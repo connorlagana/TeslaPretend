@@ -450,7 +450,6 @@ input:checked + .slider:before {
   align-items: center;
   flex-direction: row;
   width: 52vw;
-  background-color: rgb(54, 145, 145);
 }
 
 .nextFooterClass h4 {
@@ -464,4 +463,8 @@ input:checked + .slider:before {
   width: 15vw;
   height: 4vh;
   background-color: rgb(51, 127, 247);
+  color: white;
+  border: none;
+  border-radius: 2vh;
+  font-size: 1.4vh;
 }

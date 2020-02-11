@@ -34,10 +34,10 @@ const NavBar = () => {
         </ul>
       </div>
       <div className="rightNav">
-        <a href="/about" className="navItem">
+        <a href="/Shop" className="navItem">
           Shop
         </a>
-        <a href="/technologies" className="navItem">
+        <a href="/login" className="navItem">
           Sign In
         </a>
         <Menu id="hamburgerMenu" />
