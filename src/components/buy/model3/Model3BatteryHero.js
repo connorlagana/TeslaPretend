@@ -28,7 +28,10 @@ const Model3Buy = () => {
       </div>
       <div className="rightModel3Hero">
         <h1>Select Your Car</h1>
-        <button>IDK WHAT TO PUT HERE LOL</button>
+        <label className="switch">
+          <input type="checkbox" focu />
+          <span className="slider round"></span>
+        </label>
       </div>
     </div>
   );
