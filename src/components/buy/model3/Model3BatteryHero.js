@@ -27,11 +27,27 @@ const Model3Buy = () => {
         </div>
       </div>
       <div className="rightModel3Hero">
-        <h1>Select Your Car</h1>
-        <label className="switch">
-          <input type="checkbox" focu />
-          <span className="slider round"></span>
-        </label>
+        <div className="toggleSwitchClass">
+          <h1>Select Your Car</h1>
+          {/* <label className="switch">
+            <input type="checkbox" focu />
+            <span className="slider round"></span>
+          </label> */}
+          <h6>TOGGLE HERE</h6>
+        </div>
+        <div className="driveTypeDiv">
+          <div className="rearWheelDiv">
+            <h3>Rear Wheel Drive</h3>
+            <button id="interiorButton">Partial Premium Interior</button>
+            <button className="typeButton">Standard Range Plus</button>
+          </div>
+          <div className="rearWheelDiv">
+            <h3>Dual Motor All-Wheel Drive</h3>
+            <button id="interiorButton">Premium Interior</button>
+            <button className="typeButton">Standard Range Plus</button>
+            <button className="typeButton">Standard Range Plus</button>
+          </div>
+        </div>
       </div>
     </div>
   );

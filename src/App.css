@@ -179,11 +179,14 @@
   flex-direction: column;
   width: 75vw;
   height: 84vh;
-  background-color: antiquewhite;
+}
+
+.leftModel3Upper {
+  /* height: 74vh; */
 }
 
 .leftModel3Hero img {
-  width: 75vw;
+  width: 74vw;
 }
 
 #leftModel3Bottom {
@@ -191,6 +194,7 @@
   justify-content: center;
   align-items: center;
   flex-direction: row;
+  /* height: 10vh; */
 }
 
 #leftModel3Bottom div {
@@ -218,7 +222,7 @@
 
 .rightModel3Hero {
   border: solid;
-  height: 74vh;
+  height: 84vh;
   width: 25vw;
   border-width: 0px;
   border-left-width: 1px;
@@ -227,17 +231,10 @@
   justify-content: flex-start;
   align-items: center;
   flex-direction: column;
-  /* padding: 3vw; */
-  /* background-color: #2196f3; */
 }
 
-/* .switch {
-  position: relative;
-  display: inline-block;
-  height: 3vh;
-  width: 7vw;
-  background-color: #2196f3;
-} */
+.toggleSwitchClass {
+}
 
 .switch input {
   opacity: 0;
@@ -252,8 +249,6 @@
   justify-content: flex-start;
   align-items: center;
   background-color: #ccc;
-  -webkit-transition: 0.4s;
-  transition: 0.4s;
   height: 4vh;
   width: 14vw;
 }
@@ -264,19 +259,15 @@
   height: 3vh;
   width: 6vw;
   left: 0.4vw;
-
-  /* bottom: 4px;  */
   background-color: white;
   -webkit-transition: 0.4s;
   transition: 0.4s;
 }
 
 input:checked + .slider {
-  /* box-shadow: 0 0 1px #2196f3; */
 }
 
 input:focus + .slider {
-  /* background-color: #2196f3; */
 }
 
 input:checked + .slider:before {
@@ -285,7 +276,6 @@ input:checked + .slider:before {
   transform: translateX(7.2vw);
 }
 
-/* Rounded sliders */
 .slider.round {
   border-radius: 20px;
 }
@@ -294,9 +284,25 @@ input:checked + .slider:before {
   border-radius: 20px;
 }
 
+.driveTypeDiv {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.rearWheelDiv {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  flex-direction: column;
+  background-color: aqua;
+  width: 18vw;
+}
+
 .model3Footer {
   background-color: rgb(51, 51, 51);
-  height: 8vh;
+  height: 10vh;
 }
 
 .cashDiv {
