@@ -10,7 +10,7 @@ const Model3Buy = () => {
           <img src={defaultModel3} />
         </div>
         <div id="leftModel3Bottom">
-          <div id="rangeDiv" className="leftModel3BottomItem">
+          <div id="rangeDiv">
             <h1>250mi</h1>
             <p>Range</p>
           </div>
