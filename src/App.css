@@ -6,9 +6,6 @@
   position: fixed;
 }
 
-#teslaWhite {
-}
-
 .Nav {
   z-index: 1;
   display: flex;
@@ -107,4 +104,102 @@
 }
 .centerConsole p:hover {
   border-bottom-width: 2px;
+}
+
+.model3Header ol {
+  list-style-type: decimal;
+}
+
+.model3Header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: row;
+  border: solid;
+  border-width: 0px;
+  border-bottom-width: 1px;
+  border-color: rgb(223, 223, 223);
+  padding-left: 2vw;
+  padding-right: 2vw;
+}
+
+.model3HeaderNavMain ol {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+}
+
+.model3HeaderNavMain li {
+  margin-left: 5vw;
+  margin-right: 5vw;
+  margin-top: 1.5vh;
+  margin-bottom: 1.5vh;
+}
+
+.model3HeaderNavMain a {
+  text-decoration: none;
+  color: black;
+}
+
+#teslaLogo {
+  height: 1.3vh;
+}
+
+#americanFlag {
+  height: 1.8vh;
+}
+
+.model3HeaderLeftDiv {
+  width: 10vw;
+}
+
+.model3HeaderRightDiv {
+  width: 10vw;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+.model3BatteryHero {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+  font-family: "Montserrat", sans-serif;
+}
+
+.leftModel3Hero {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  width: 65vw;
+}
+
+.leftModel3Hero img {
+  width: 65vw;
+  background-color: aqua;
+}
+
+#leftModel3Bottom {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+}
+
+#leftModel3Bottom div {
+  margin-left: 1vw;
+  margin-right: 1vw;
+}
+
+#dividerDiv {
+  width: 0.07vw;
+  height: 8vh;
+  background-color: rgb(223, 223, 223);
+}
+
+.rightModel3Hero {
+  
 }
