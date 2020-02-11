@@ -106,10 +106,6 @@
   border-bottom-width: 2px;
 }
 
-.model3Header ol {
-  list-style-type: decimal;
-}
-
 .model3Header {
   display: flex;
   justify-content: space-between;
@@ -121,6 +117,10 @@
   border-color: rgb(223, 223, 223);
   padding-left: 2vw;
   padding-right: 2vw;
+}
+
+.model3Header ol {
+  list-style-type: decimal;
 }
 
 .model3HeaderNavMain ol {
@@ -194,6 +194,13 @@
   display: flex;
   align-items: center;
   flex-direction: column;
+}
+
+#leftModel3Bottom h1 {
+  margin: 0;
+}
+#leftModel3Bottom p {
+  margin: 0;
 }
 
 #dividerDiv {
