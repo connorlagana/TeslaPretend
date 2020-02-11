@@ -576,6 +576,38 @@ input:checked + .slider:before {
   text-decoration: none;
 }
 
-#actualRegister {
-  
+.actualRegister {
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  font-family: "Montserrat", sans-serif;
+  box-shadow: inset 0 0 1000px black;
+}
+
+.backActReg {
+  background-color: rgb(238, 238, 238);
+  border-radius: 1.5vh;
+  height: 70vh;
+  width: 42vw;
+  margin-right: 8vw;
+}
+
+#topRegAct {
+  background-color: white;
+  border-top-left-radius: 1.5vh;
+  border-top-right-radius: 1.5vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.4vh;
+  height: 5vh;
+}
+
+#alActSign {
+  color: rgb(51, 127, 247);
+  margin-left: 1vh;
+  cursor: pointer;
+  text-decoration: none;
 }

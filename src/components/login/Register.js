@@ -35,7 +35,12 @@ class Register extends Component {
         />
         <div className="actualRegister">
           <div className="backActReg">
-            
+            <div id="topRegAct">
+              <div>Already have an account?</div>
+              <a id="alActSign" href="/login">
+                Sign In
+              </a>
+            </div>
           </div>
         </div>
       </div>
