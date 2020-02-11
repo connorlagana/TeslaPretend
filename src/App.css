@@ -575,3 +575,7 @@ input:checked + .slider:before {
   cursor: pointer;
   text-decoration: none;
 }
+
+#actualRegister {
+  
+}
