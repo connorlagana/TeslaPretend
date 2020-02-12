@@ -41,6 +41,9 @@ class Register extends Component {
                 Sign In
               </a>
             </div>
+            <div id="createAccount">
+              Create Account
+            </div>
           </div>
         </div>
       </div>
