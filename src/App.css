@@ -276,16 +276,20 @@ span {
     top: -9em;
   }
 }
+#digit0 {
+  top: -1em;
+  /* -4em means 5 will be the number */
+}
 
 #digit1 {
-  top: -4em;
+  top: -5em;
   /* -4em means 5 will be the number */
 }
 #digit2 {
-  top: -2em;
+  top: -1em;
 }
 #digit3 {
-  top: 0em;
+  top: 2em;
 }
 
 #leftModel3Bottom h1 {
@@ -808,4 +812,32 @@ input:checked + .slider:before {
 
 #customerPrivacy:hover {
   color: rgb(28, 87, 184);
+}
+
+.exterior {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#dividerDivExterior {
+  height: 0.1vh;
+  width: 18vw;
+  background-color: rgb(223, 223, 223);
+}
+#selectColor {
+  font-size: 2.4vh;
+  margin-bottom: 2vh;
+}
+
+#colorInd {
+  height: 5vh;
+  width: 5vh;
+  margin: 0.8vh;
+  cursor: pointer;
+  margin-bottom: 2vh
+}
+
+.wheelsModel3Div {
+  
 }
