@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import registerPic from "../../images/registerPic.jpg";
 import registerPic2 from "../../images/registerPic2.jpg";
+import ReCAPTCHA from "react-google-recaptcha";
 
 class Register extends Component {
   constructor(props) {
@@ -25,9 +26,13 @@ class Register extends Component {
     }
   };
 
+  onChange = value => {
+    console.log("Captcha value:", value);
+  };
+
   render() {
     return (
-      <div className="login">
+      <div className="register">
         <img
           src={this.state.backPic}
           onClick={this.changeBackPic}
@@ -41,8 +46,49 @@ class Register extends Component {
                 Sign In
               </a>
             </div>
-            <div id="createAccount">
-              Create Account
+            <div id="createAccount">Create Account</div>
+            <div>
+              <form className="formRegister">
+                <input
+                  type="text"
+                  id="registerTextInput"
+                  placeholder="First Name"
+                />
+                <input
+                  type="text"
+                  id="registerTextInput"
+                  placeholder="Last Name"
+                />
+                <input
+                  type="email"
+                  id="registerTextInput"
+                  placeholder="Email Address"
+                />
+                <input
+                  type="password"
+                  id="registerTextInput"
+                  placeholder="Password"
+                />
+                <input
+                  type="password"
+                  id="registerTextInput"
+                  placeholder="Type your password again"
+                />
+                <div id="minimumText">
+                  Minimum of eight characters, one letter and one number
+                </div>
+                <ReCAPTCHA
+                  sitekey="6LcxndgUAAAAAAMD80WwxqPcw6DXiTOQf1nkGaZA"
+                  onChange={this.onChange}
+                />
+                <button id="createAcctRegButton">Create Account</button>
+                <div id="minimumText">
+                  By creating an account you agree to the&nbsp;
+                  <div id="customerPrivacy">Customer Privacy Policy</div>
+                  &nbsp;and&nbsp;
+                  <div id="customerPrivacy">Supercharger Fair Use Policy</div>
+                </div>
+              </form>
             </div>
           </div>
         </div>

@@ -18,7 +18,7 @@ class Model3Battery extends Component {
       <div>
         <Model3Header />
         <Model3BatteryHero />
-        <Model3Footer />
+        
       </div>
     );
   }

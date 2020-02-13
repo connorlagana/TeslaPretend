@@ -44,7 +44,9 @@ class Login extends Component {
                 placeholder="Password"
               />
               <div>
-                <div id="forgotPassword">I forgot my password</div>
+                <div id="forgotPassword" onClick={this.changeBackPic}>
+                  I forgot my password
+                </div>
               </div>
               <button id="singInButton">Sign In</button>
             </form>

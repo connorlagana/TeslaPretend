@@ -111,6 +111,7 @@ body {
 }
 
 .model3Header {
+  position: fixed;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -174,6 +175,7 @@ body {
   flex-direction: row;
   font-family: "Montserrat", sans-serif;
   height: 84vh;
+  padding-top: 8vh;
 }
 
 .leftModel3Hero {
@@ -201,12 +203,89 @@ body {
   /* height: 10vh; */
 }
 
-#leftModel3Bottom div {
+#rangeDiv {
   margin-left: 1.5vw;
   margin-right: 1.5vw;
   display: flex;
   align-items: center;
   flex-direction: column;
+}
+
+#digitsToChange {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+  /* background-color: aqua; */
+  width: 10vw;
+  padding: 0;
+  margin: 0;
+}
+
+#digitsToChange div {
+  width: 1em;
+  height: 1em;
+  overflow: hidden;
+  line-height: 1em;
+  display: inline-block;
+  margin: 0;
+  padding: 0;
+  font-size: 4vh;
+}
+
+span {
+  position: relative;
+}
+
+.animate {
+  -webkit-animation: spinit 0.2s 5;
+  -moz-animation: spinit 0.2s 5;
+  animation: spinit 0.2s 5;
+}
+
+@-webkit-keyframes spinit {
+  0% {
+    top: 0em;
+  }
+  50% {
+    top: -5em;
+  }
+  100% {
+    top: -9em;
+  }
+}
+@-moz-keyframes spinit {
+  0% {
+    top: 0em;
+  }
+  50% {
+    top: -5em;
+  }
+  100% {
+    top: -9em;
+  }
+}
+@keyframes spinit {
+  0% {
+    top: 0em;
+  }
+  50% {
+    top: -5em;
+  }
+  100% {
+    top: -9em;
+  }
+}
+
+#digit1 {
+  top: -4em;
+  /* -4em means 5 will be the number */
+}
+#digit2 {
+  top: -2em;
+}
+#digit3 {
+  top: 0em;
 }
 
 #leftModel3Bottom h1 {
@@ -226,7 +305,7 @@ body {
 
 .rightModel3Hero {
   border: solid;
-  height: 84vh;
+  height: 82vh;
   width: 25vw;
   border-width: 0px;
   border-left-width: 1px;
@@ -329,7 +408,8 @@ input:checked + .slider:before {
 .typeButton {
   background-color: rgba(0, 0, 0, 0);
   border: solid;
-  border-color: rgb(51, 127, 247);
+  border-color: rgb(199, 199, 199);
+  border-width: 0.4vh;
   height: 5vh;
   width: 18vw;
   border-radius: 10vw;
@@ -341,6 +421,11 @@ input:checked + .slider:before {
   font-weight: 900;
   font-family: "Montserrat", sans-serif;
   /* padding-left: 3px; */
+  cursor: pointer;
+}
+
+#activate {
+  border-color: rgb(51, 127, 247);
 }
 
 #learnMorePar {
@@ -364,6 +449,8 @@ input:checked + .slider:before {
 
 .model3Footer {
   background-color: rgb(51, 51, 51);
+  width: 100vw;
+  position: fixed;
   height: 10vh;
   display: flex;
   justify-content: flex-start;
@@ -409,12 +496,13 @@ input:checked + .slider:before {
   height: 10vh;
   width: 8vw;
   margin: 1vw;
+  font-size: 1.3vh;
 }
 
 .insidePricesDiv h2 {
   margin: 0;
   height: 5vh;
-  width: 8vw;
+  width: 10vw;
   display: flex;
   justify-content: flex-start;
   align-items: flex-end;
@@ -423,7 +511,7 @@ input:checked + .slider:before {
 .insidePricesDiv p {
   margin: 0;
   height: 5vh;
-  width: 8vw;
+  width: 10vw;
   display: flex;
   justify-content: flex-start;
   align-items: flex-start;
@@ -516,6 +604,11 @@ input:checked + .slider:before {
   width: 14vw;
   width: 28vw;
   color: rgb(51, 127, 247);
+  cursor: pointer;
+}
+
+#forgotPassword:hover {
+  color: rgb(38, 97, 190);
 }
 
 #signInDiv {
@@ -538,7 +631,6 @@ input:checked + .slider:before {
   margin: 0.5vh;
   padding: 0;
   border-radius: 2vh;
-  box-shadow: none;
   border: solid;
   border-width: 1px;
   border-color: #ccc;
@@ -548,6 +640,10 @@ input:checked + .slider:before {
   font-weight: 100;
 }
 
+#emailInputLogin:hover {
+  border-color: rgb(156, 156, 156);
+}
+
 #singInButton {
   height: 4vh;
   margin-top: 1vh;
@@ -555,10 +651,17 @@ input:checked + .slider:before {
   border-radius: 2vh;
   box-shadow: none;
   border: none;
-  background-color: rgb(51, 127, 247);
+  background-color: rgb(42, 110, 218);
   color: white;
   font-size: 1.4vh;
   text-transform: uppercase;
+  cursor: pointer;
+}
+
+#singInButton:hover {
+  border: solid;
+  border-color: rgb(170, 170, 170);
+  border-width: 0.3vh;
 }
 
 #createAcct {
@@ -574,6 +677,10 @@ input:checked + .slider:before {
   font-size: 1.2vh;
   cursor: pointer;
   text-decoration: none;
+}
+
+#createAcct:hover {
+  color: rgb(38, 97, 190);
 }
 
 .actualRegister {
@@ -617,6 +724,10 @@ input:checked + .slider:before {
   text-decoration: none;
 }
 
+#alActSign:hover {
+  color: rgb(39, 97, 190);
+}
+
 #createAccount {
   height: 9vh;
   width: 36vw;
@@ -630,4 +741,71 @@ input:checked + .slider:before {
   border-bottom-width: 1.5px;
   border-color: rgb(211, 211, 211);
   color: rgb(105, 105, 105);
+}
+
+.formRegister {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  margin: 1vh;
+}
+
+#registerTextInput {
+  height: 3.6vh;
+  width: 34vw;
+  margin: 0.5vh;
+  padding: 0;
+  border-radius: 2vh;
+  border: solid;
+  border-width: 1px;
+  border-color: #ccc;
+  padding-left: 10px;
+  font-size: 1.9vh;
+  color: rgb(138, 138, 138);
+  font-weight: 100;
+}
+
+#registerTextInput:hover {
+  border-color: rgb(156, 156, 156);
+}
+
+#minimumText {
+  font-size: 1.2vh;
+  color: rgb(105, 105, 105);
+  margin: 1vh;
+  width: 42vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-weight: 500;
+}
+
+#createAcctRegButton {
+  height: 4vh;
+  margin-top: 1vh;
+  width: 28vw;
+  border-radius: 2vh;
+  box-shadow: none;
+  border: none;
+  background-color: rgb(42, 110, 218);
+  color: white;
+  font-size: 1.4vh;
+  text-transform: uppercase;
+  cursor: pointer;
+}
+
+#createAcctRegButton:hover {
+  border: solid;
+  border-color: rgb(197, 197, 197);
+  border-width: 0.2vh;
+}
+
+#customerPrivacy {
+  color: rgb(35, 111, 233);
+  cursor: pointer;
+}
+
+#customerPrivacy:hover {
+  color: rgb(28, 87, 184);
 }
