@@ -110,12 +110,12 @@ class Model3Hero extends Component {
             changeActiveButton={this.changeActiveButton}
           />
         </Route>
-        {/* <Route path="/">
+        <Route path="/model3/design/exterior">
           <Model3Exterior
             pic={this.state.pic}
             changeActiveButtonColor={this.changeActiveButtonColor}
           />
-        </Route> */}
+        </Route>
         <Model3Footer price={this.state.price} />
       </div>
     );

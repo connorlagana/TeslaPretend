@@ -542,10 +542,15 @@ input:checked + .slider:before {
 
 .nextFooterClass {
   display: flex;
-  justify-content: flex-end;
+  justify-content: space-around;
   align-items: center;
   flex-direction: row;
   width: 52vw;
+}
+
+.nextFooterClass div {
+  color: white;
+  text-decoration: underline;
 }
 
 .nextFooterClass h4 {
