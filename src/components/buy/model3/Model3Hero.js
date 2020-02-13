@@ -5,16 +5,22 @@ import Model3Battery from "./Model3Battery.js";
 import Model3Exterior from "./Model3Exterior.js";
 import Model3Header from "./Model3Header.js";
 import Model3Footer from "./Model3Footer.js";
-import defaultModel3 from "../../../images/model3/defaultModel3.png";
-import performanceModel3 from "../../../images/model3/performanceModel3.png";
+import regularWhiteModel3 from "../../../images/model3/regular/regularWhiteModel3.png";
+import regularBlackModel3 from "../../../images/model3/regular/regularBlackModel3.png";
+import regularBlueModel3 from "../../../images/model3/regular/regularBlueModel3.png";
+import regularRedModel3 from "../../../images/model3/regular/regularRedModel3.png";
+import regularGrayModel3 from "../../../images/model3/regular/regularGrayModel3.png";
+
+import performanceModel3 from "../../../images/model3/performance/performanceModel3.png";
 
 class Model3Hero extends Component {
   constructor(props) {
     super(props);
 
     this.state = {
-      pic: defaultModel3,
+      pic: regularWhiteModel3,
       selectedBattery: 0,
+      selectedColor: 0,
       price: 39990,
       range: 250,
       topSpeed: 140,
@@ -31,7 +37,7 @@ class Model3Hero extends Component {
     });
     if (this.state.selectedBattery == 0) {
       this.setState({
-        pic: defaultModel3,
+        pic: regularWhiteModel3,
         price: 39990,
         range: 250,
         topSpeed: 140,
@@ -42,7 +48,7 @@ class Model3Hero extends Component {
       });
     } else if (this.state.selectedBattery == 1) {
       this.setState({
-        pic: defaultModel3,
+        pic: regularWhiteModel3,
         price: 48990,
         range: 322,
         topSpeed: 145,
@@ -67,11 +73,32 @@ class Model3Hero extends Component {
     }
   };
 
+  changeActiveButtonColor = async e => {
+    await this.setState({
+      selectedColor: e.target.value
+    });
+    console.log();
+    if (this.state.selectedColor == 0 && this.state.selectedBattery <= 1) {
+      this.setState({
+        pic: regularWhiteModel3,
+        price: 39990
+      });
+    } else if (
+      this.state.selectedColor == 1 &&
+      this.state.selectedBattery <= 1
+    ) {
+      this.setState({
+        pic: regularBlackModel3,
+        price: 39990
+      });
+    }
+  };
+
   render() {
     return (
       <div>
         <Model3Header />
-        {/* <Route path="/">
+        <Route path="/">
           <Model3Battery
             pic={this.state.pic}
             range={this.state.range}
@@ -82,10 +109,13 @@ class Model3Hero extends Component {
             thirdType={this.state.thirdType}
             changeActiveButton={this.changeActiveButton}
           />
-        </Route> */}
-        <Route>
-          <Model3Exterior pic={this.state.pic} />
         </Route>
+        {/* <Route path="/">
+          <Model3Exterior
+            pic={this.state.pic}
+            changeActiveButtonColor={this.changeActiveButtonColor}
+          />
+        </Route> */}
         <Model3Footer price={this.state.price} />
       </div>
     );

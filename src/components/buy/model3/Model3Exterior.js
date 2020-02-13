@@ -23,18 +23,45 @@ class Model3Exterior extends Component {
             <div>
               <div id="selectColor">Select Color</div>
               <div>
-                <img src={whitePng} id="colorInd" />
-                <img src={redPng} id="colorInd" />
-                <img src={bluePng} id="colorInd" />
-                <img src={blackPng} id="colorInd" />
-                <img src={grayPng} id="colorInd" />
+                <img
+                  src={whitePng}
+                  id="colorInd"
+                  onClick={this.props.changeActiveButtonColor}
+                  value={0}
+                />
+                <img
+                  src={redPng}
+                  id="colorInd"
+                  onClick={this.props.changeActiveButtonColor}
+                  value={1}
+                />
+                <img
+                  src={bluePng}
+                  id="colorInd"
+                  onClick={this.props.changeActiveButtonColor}
+                  value={2}
+                />
+                <img
+                  src={blackPng}
+                  id="colorInd"
+                  onClick={this.props.changeActiveButtonColor}
+                  value={3}
+                />
+                <img
+                  src={grayPng}
+                  id="colorInd"
+                  onClick={this.props.changeActiveButtonColor}
+                  value={4}
+                />
               </div>
             </div>
             <div id="dividerDivExterior" />
             <div className="wheelsModel3Div">
               <div id="selectColor">Select Wheels</div>
-              <img src={defaultTire} id="colorInd" />
-              <img src={premiumTire} id="colorInd" />
+              <div>
+                <img src={defaultTire} id="colorInd" />
+                <img src={premiumTire} id="colorInd" />
+              </div>
             </div>
           </div>
         </div>

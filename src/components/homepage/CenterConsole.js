@@ -7,7 +7,7 @@ const CenterConsole = () => {
         <h1>Model 3</h1>
       </div>
       <div>
-        <a href="/model3/design/battery">
+        <a href="/model3/design">
           <button id="customOrder">Custom Order</button>
         </a>
         <button id="existingInventory">Existing Inventory</button>
