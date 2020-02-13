@@ -24,7 +24,7 @@ const Model3Footer = () => {
       </div>
       <div id="dividerFooter" />
       <div className="nextFooterClass">
-        <h4>Estimated Delivery: 5-7 weeks</h4>
+        <div>Estimated Delivery: 5-7 weeks</div>
         <button id="nextButton">Next</button>
       </div>
     </div>
