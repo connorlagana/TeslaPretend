@@ -851,3 +851,73 @@ input:checked + .slider:before {
   width: 18vw;
   flex-direction: column;
 }
+
+.model3Main {
+  font-family: "Montserrat", sans-serif;
+}
+
+.model3WholeFrameMain {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-direction: column;
+  height: 100vh;
+  width: 100vw;
+}
+
+.topModel3Main {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  padding-bottom: 30vh;
+  color: white;
+}
+
+.topModel3Main div {
+  font-size: 2.2vh;
+  margin: 0;
+}
+
+.topModel3Main p {
+  font-size: 3.2vh;
+  padding: 0;
+}
+
+#underTeslaModel3Title {
+  font-size: 5vh;
+  font-weight: 900;
+}
+
+.bottomModel3Main {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+  color: white;
+}
+
+#secondsBottomModel3Main {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  height: 10vh;
+  width: 8vw;
+}
+
+#topBottomModel3Main {
+  display: flex;
+  justify-content: space-around;
+  align-items: flex-end;
+  flex-direction: row;
+}
+
+#topBottomModel3Main div {
+  font-size: 2.5vh;
+}
+
+#weirdDumbFucky {
+  height: 5vh;
+  width: 5vh;
+}
