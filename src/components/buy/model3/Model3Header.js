@@ -7,7 +7,9 @@ const Model3Header = () => {
   return (
     <div className="model3Header">
       <div className="model3HeaderLeftDiv">
-        <img src={teslaLogo} id="teslaLogo" />
+        <a href="/">
+          <img src={teslaLogo} id="teslaLogo" />
+        </a>
       </div>
       <div className="model3HeaderNavMain">
         <ol>
