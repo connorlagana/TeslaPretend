@@ -21,18 +21,25 @@ const Model3Main = () => {
             </div>
             <div>0-60 mph</div>
           </div>
-          <div id="topBottomModel3Main">
-            <div>322mi</div>
+          <div id="dividerModel3BottomMain" />
+          <div id="secondsBottomModel3Main">
+            <div id="topBottomModel3Main">
+              <div>322mi</div>
+            </div>
+            <div>
+              <div>Range</div>
+            </div>
           </div>
-          <div>
-            <div>Range</div>
+          <div id="dividerModel3BottomMain" />
+          <div id="secondsBottomModel3Main">
+            <div id="topBottomModel3Main">
+              <div>AWD</div>
+            </div>
+            <div>Dual Motor</div>
           </div>
-          <div id="topBottomModel3Main">
-            <div>322mi</div>
-            <div>Range</div>
-          </div>
-
-          <div id="rangeBottomModel3Main"></div>
+          <a href="/model3/design">
+            <button id="orderNowButton">Order Now</button>
+          </a>
         </div>
       </div>
     </div>

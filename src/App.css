@@ -904,6 +904,7 @@ input:checked + .slider:before {
   flex-direction: column;
   height: 10vh;
   width: 8vw;
+  /* background-color: black; */
 }
 
 #topBottomModel3Main {
@@ -918,6 +919,36 @@ input:checked + .slider:before {
 }
 
 #speedThingy {
-  height: 5vh;
-  width: 5vh;
+  height: 3.5vh;
+  width: 3.5vh;
+  margin-right: 1vh;
+}
+
+#dividerModel3BottomMain {
+  height: 7vh;
+  width: 0.1vh;
+  background-color: rgb(255, 255, 255);
+}
+
+#orderNowButton {
+  box-shadow: none;
+  border: solid;
+  border-color: white;
+  border-radius: 12vh;
+  border-width: 0.4vh;
+  height: 4vh;
+  width: 10vw;
+  color: white;
+  background-color: rgba(0, 0, 0, 0);
+  font-size: 1.2vh;
+  font-weight: 900;
+  text-transform: uppercase;
+  font-family: "Montserrat", sans-serif;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+
+#orderNowButton:hover {
+  color: black;
+  background-color: white;
 }
