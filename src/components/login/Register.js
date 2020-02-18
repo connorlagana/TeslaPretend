@@ -3,6 +3,12 @@ import registerPic from "../../images/registerPic.jpg";
 import registerPic2 from "../../images/registerPic2.jpg";
 import ReCAPTCHA from "react-google-recaptcha";
 
+import {
+  registerUser,
+  loginUser,
+  verifyUser
+} from "../../services/api_helper.js";
+
 class Register extends Component {
   constructor(props) {
     super(props);
@@ -12,6 +18,14 @@ class Register extends Component {
       password: "",
       backPic: registerPic
     };
+  }
+
+  handleChange = (e) => {
+    const { name, value } = e.target;
+    // Same as const name = e.target.name // const value = e.target.value
+    this.setState({
+      [name]: value
+    })
   }
 
   changeBackPic = () => {
