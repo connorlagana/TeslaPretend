@@ -20,7 +20,7 @@ const Model3Header = () => {
             </a>
           </li>
           <li>
-            <a className="buyHeaderNavItem" href="/model3/design/exterior">
+            <a className="buyHeaderNavItem" href="/exterior">
               Exterior
             </a>
           </li>

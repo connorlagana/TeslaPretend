@@ -10,6 +10,12 @@ import defaultTire from "../../../images/model3/tires/defaultModel3Tires.png";
 import premiumTire from "../../../images/model3/tires/premiumModel3Tires.png";
 
 class Model3Exterior extends Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      // pic:
+    };
+  }
   render() {
     return (
       <div>

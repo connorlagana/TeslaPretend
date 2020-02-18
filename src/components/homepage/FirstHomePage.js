@@ -5,14 +5,22 @@ import CenterConsole from "./CenterConsole.js";
 
 class FirstHomePage extends Component {
   constructor(props) {
-    super(props)
-    
+    super(props);
+    this.state = {
+      currentUser: null
+    };
+  }
+
+  componentDidMount() {
+    this.setState({
+      currentUser: this.props.currentUser
+    });
   }
   render() {
     return (
       <div>
         <img src={mainHeroNarrow} id="mainHero" />
-        <NavBar />
+        <NavBar currentUser={this.state.currentUser} />
         <CenterConsole />
       </div>
     );

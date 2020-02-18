@@ -20,13 +20,16 @@ export const loginUser = async loginData => {
 // REGISTER
 export const registerUser = async registerData => {
   try {
+    console.log("got here 1");
     const resp = await api.post("/signup", registerData);
+    console.log("got here 2");
     api.defaults.headers.common.authorization = `Bearer ${resp.data.auth_token}`;
     localStorage.setItem("authToken", resp.data.auth_token);
     localStorage.setItem("name", resp.data.user.name);
     localStorage.setItem("email", resp.data.user.email);
     return resp.data.user;
   } catch (e) {
+    console.log("got here 3");
     console.log(e.response);
     if (e.response.status === 422) {
       return {

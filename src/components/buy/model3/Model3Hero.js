@@ -98,7 +98,7 @@ class Model3Hero extends Component {
     return (
       <div>
         <Model3Header />
-        <Route path="/">
+        <Route path="/battery">
           <Model3Battery
             pic={this.state.pic}
             range={this.state.range}
@@ -110,7 +110,7 @@ class Model3Hero extends Component {
             changeActiveButton={this.changeActiveButton}
           />
         </Route>
-        <Route path="/model3/design/exterior">
+        <Route path="/exterior">
           <Model3Exterior
             pic={this.state.pic}
             changeActiveButtonColor={this.changeActiveButtonColor}
