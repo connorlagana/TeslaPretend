@@ -2,6 +2,7 @@ import React from "react";
 import model3MainPic from "../../images/model3Main.jpg";
 import NavBar from "../nav/NavBar.js";
 import speedThingy from "../../images/speedThingy.svg";
+import { Link } from "react-router-dom";
 
 const Model3Main = () => {
   return (
@@ -37,9 +38,9 @@ const Model3Main = () => {
             </div>
             <div>Dual Motor</div>
           </div>
-          <a href="/model3/design">
+          <Link to="/model3/design">
             <button id="orderNowButton">Order Now</button>
-          </a>
+          </Link>
         </div>
       </div>
     </div>

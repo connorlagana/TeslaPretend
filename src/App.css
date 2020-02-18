@@ -952,3 +952,35 @@ input:checked + .slider:before {
   color: black;
   background-color: white;
 }
+
+.profileHeader {
+  background-color: rgb(33, 33, 33);
+  width: 100vw;
+  height: 10vh;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-family: "Montserrat", sans-serif;
+}
+
+#profHeadLeftDiv {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  margin: 2vh;
+  font-size: 2.2vh;
+}
+
+#profHeadLeftDiv div {
+  margin-left: 4vh;
+}
+
+#profHeadLeftDiv button {
+  box-shadow: none;
+  background-color: rgba(0, 0, 0, 0);
+  border: none;
+  color: white;
+  font-size: 2.2vh;
+  cursor: pointer;
+}

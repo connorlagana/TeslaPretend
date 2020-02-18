@@ -17,6 +17,12 @@ export const loginUser = async loginData => {
   return resp.data.user;
 };
 
+//DELETE THE TODO
+export const deleteGarage = async (id, postData) => {
+  const resp = await api.delete(`/garages/${id}`, postData);
+  return resp.data;
+};
+
 // REGISTER
 export const registerUser = async registerData => {
   try {

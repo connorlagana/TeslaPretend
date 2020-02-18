@@ -11,7 +11,11 @@ import Model3Main from "./components/homepage/Model3Main.js";
 import Model3Exterior from "./components/buy/model3/Model3Exterior.js";
 import MainProfile from "./components/profile/MainProfile.js";
 
-import { registerUser, loginUser, verifyUser } from "./services/api_helper.js";
+import {
+  registerUser,
+  loginUser,
+  verifyUser,
+} from "./services/api_helper.js";
 
 class App extends Component {
   constructor(props) {
@@ -32,6 +36,22 @@ class App extends Component {
         });
     }
   }
+
+  handleLogin = async (e, loginData) => {
+    e.preventDefault();
+    const currentUser = await loginUser(loginData);
+    this.setState({ currentUser });
+    this.props.history.push("/");
+  };
+
+  handleLogout = () => {
+    this.setState({
+      currentUser: null
+    });
+    localStorage.removeItem("authToken");
+    localStorage.removeItem("name");
+    localStorage.removeItem("email");
+  };
 
   handleRegister = async (e, registerData) => {
     e.preventDefault();
@@ -58,20 +78,37 @@ class App extends Component {
           path="/"
           render={() => <FirstHomePage currentUser={this.state.currentUser} />}
         />
-        <Route exact path="/model3/design" render={() => <Model3Hero />} />
+        <Route
+          exact
+          path="/model3/design"
+          render={() => <Model3Hero currentUser={this.state.currentUser} />}
+        />
         {/* <Route
           exact
           path="/model3/design/exterior"
           component={Model3Exterior}
         /> */}
         <Route exact path="/model3" render={() => <Model3Main />} />
-        <Route exact path="/login" render={() => <Login />} />
+        <Route
+          exact
+          path="/login"
+          render={() => <Login handleLogin={this.handleLogin} />}
+        />
         <Route
           exact
           path="/register"
           render={() => <Register handleRegister={this.handleRegister} />}
         />
-        <Route exact path="/profile" render={() => <MainProfile />} />
+        <Route
+          exact
+          path="/profile"
+          render={() => (
+            <MainProfile
+              currentUser={this.state.currentUser}
+              postGarage={this.postGarage}
+            />
+          )}
+        />
       </div>
     );
   }
