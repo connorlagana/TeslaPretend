@@ -20,6 +20,18 @@ class App extends Component {
       currentUser: null
     };
   }
+  componentDidMount() {
+    verifyUser();
+    if (localStorage.getItem("authToken")) {
+      const name = localStorage.getItem("name");
+      const email = localStorage.getItem("email");
+      const user = { name, email };
+      user &&
+        this.setState({
+          currentUser: user
+        });
+    }
+  }
 
   handleRegister = async (e, registerData) => {
     e.preventDefault();
