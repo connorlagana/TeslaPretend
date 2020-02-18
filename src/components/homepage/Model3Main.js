@@ -1,7 +1,7 @@
 import React from "react";
 import model3MainPic from "../../images/model3Main.jpg";
 import NavBar from "../nav/NavBar.js";
-import weirdDumbFucky from "../../images/weirdDumbFucky.svg";
+import speedThingy from "../../images/speedThingy.svg";
 
 const Model3Main = () => {
   return (
@@ -16,7 +16,7 @@ const Model3Main = () => {
         <div className="bottomModel3Main">
           <div id="secondsBottomModel3Main">
             <div id="topBottomModel3Main">
-              <img src={weirdDumbFucky} id="weirdDumbFucky" />
+              <img src={speedThingy} id="speedThingy" />
               <div>3.2s</div>
             </div>
             <div>0-60 mph</div>
