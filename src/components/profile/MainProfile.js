@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import ProfileHeader from "./ProfileHeader.js";
+
 import { Route, withRouter } from "react-router-dom";
 import {
   indexGarages,
@@ -50,7 +50,7 @@ class MainProfile extends Component {
   render() {
     return (
       <div>
-        {/* <ProfileHeader createGarage={this.createGarage} /> */}
+        
         <Route
           exact
           path="/garages"

@@ -94,23 +94,36 @@ export default class SingleGarage extends Component {
             </Link>
             {this.state.carsInTheGarage &&
               this.state.carsInTheGarage.map(car => (
-                <div key={car.id}>
-                  {/* <Link to={`/garages/${garage.id}`}> */}
-                  <div>Name:</div>
-                  <div>{car.name}</div>
-                  <div>Battery:</div>
-                  <div>{car.battery}</div>
-                  <div>Color:</div>
-                  <div>{car.color}</div>
-                  <div>Interior:</div>
-                  <div>{car.interior}</div>
-                  <div>Wheels:</div>
-                  <div>{car.wheel}</div>
-                  <div>Autopilot:</div>
-                  <div>{car.autopilot}</div>
-                  <div>Price:</div>
-                  <div>{car.price}</div>
-                  {/* </Link> */}
+                <div className="carIndy" key={car.id}>
+                  <div>
+                    <div>Name:</div>
+                    <div>{car.name}</div>
+                  </div>
+                  <div>
+                    <div>Battery:</div>
+                    <div>{car.battery}</div>
+                  </div>
+                  <div>
+                    <div>Color:</div>
+                    <div>{car.color}</div>
+                  </div>
+                  <div>
+                    <div>Interior:</div>
+                    <div>{car.interior}</div>
+                  </div>
+                  <div>
+                    <div>Wheels:</div>
+                    <div>{car.wheel}</div>
+                  </div>
+                  <div>
+                    <div>Autopilot:</div>
+                    <div>{car.autopilot}</div>
+                  </div>
+                  <div>
+                    <div>Price:</div>
+                    <div>{car.price}</div>
+                  </div>
+
                   <button>Delete {car.name}</button>
                 </div>
               ))}

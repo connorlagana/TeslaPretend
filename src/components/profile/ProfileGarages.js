@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import { Link } from "react-router-dom";
 import garagePic from "../../images/garage.jpeg";
+import ProfileHeader from "./ProfileHeader.js";
 
 class ProfileGarages extends Component {
   constructor(props) {
@@ -22,6 +23,7 @@ class ProfileGarages extends Component {
   render() {
     return (
       <div>
+        <ProfileHeader createGarage={this.createGarage} />
         <h1 id="yourGarages">Your Garages:</h1>
         {this.props.garages &&
           this.props.garages.map(garage => (
@@ -35,9 +37,9 @@ class ProfileGarages extends Component {
               </button>
             </div>
           ))}
-        <Link to="/garages/new">
+        {/* <Link to="/garages/new">
           <button>Add a garage</button>
-        </Link>
+        </Link> */}
       </div>
     );
   }

@@ -39,7 +39,7 @@ class Model3Hero extends Component {
         wheel: "19 inch",
         autopilot: true,
         price: 39990,
-        image: "other.com"
+        image: ""
       }
     };
   }
@@ -67,7 +67,8 @@ class Model3Hero extends Component {
           wheel: "19 inch",
           autopilot: true,
           price: 39990,
-          image: "other.com"
+          image:
+            "https://static-assets.tesla.com/configurator/compositor?&options=$W38B,$PPSW,$DV2W,$MT308,$IN3B2&view=STUD_3QTR&model=m3&size=1441&bkba_opt=1&version=v0027d202002181552&version=v0027d202002181552.jpg"
         }
       });
     } else if (this.state.selectedBattery == 1) {
@@ -88,7 +89,8 @@ class Model3Hero extends Component {
           wheel: "19 inch",
           autopilot: true,
           price: 48990,
-          image: "other.com"
+          image:
+            "https://static-assets.tesla.com/configurator/compositor?&options=$W39B,$PPSW,$DV4W,$MT310,$IN3PB&view=STUD_3QTR&model=m3&size=1441&bkba_opt=1&version=v0027d202002181552&version=v0027d202002181552.jpg"
         }
       });
     } else if (this.state.selectedBattery == 2) {
@@ -111,7 +113,8 @@ class Model3Hero extends Component {
           wheel: "19 inch",
           autopilot: true,
           price: 56990,
-          image: "other.com"
+          image:
+            "https://static-assets.tesla.com/configurator/compositor?&options=$W32D,$PPSW,$DV4W,$SLR1,$MT311,$IN3PB&view=STUD_3QTR&model=m3&size=1441&bkba_opt=1&version=v0027d202002181552&version=v0027d202002181552"
         }
       });
     }

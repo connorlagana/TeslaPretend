@@ -1034,3 +1034,12 @@ input:checked + .slider:before {
   font-size: 2.4vh;
   text-decoration: none;
 }
+
+.carIndy {
+  background-color: rgb(190, 190, 190);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+  margin-bottom: 2vh;
+}

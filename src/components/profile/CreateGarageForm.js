@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React, { Component } from "react";
 
 export default class CreateGarageForm extends Component {
   constructor(props) {
@@ -6,20 +6,22 @@ export default class CreateGarageForm extends Component {
 
     this.state = {
       title: ""
-    }
+    };
   }
 
-  handleChange = (e) => {
+  handleChange = e => {
     const { name, value } = e.target;
-    this.setState({ [name]: value })
-  }
+    this.setState({ [name]: value });
+  };
 
   render() {
     return (
-      <form onSubmit={(e) => {
-        e.preventDefault();
-        this.props.createGarage(this.state)
-      }}>
+      <form
+        onSubmit={e => {
+          e.preventDefault();
+          this.props.createGarage(this.state);
+        }}
+      >
         <label htmlFor="title">title</label>
         <input
           type="text"
@@ -27,8 +29,8 @@ export default class CreateGarageForm extends Component {
           value={this.state.title}
           onChange={this.handleChange}
         />
-        <button>Submit</button>
+        <button>Add New Garage</button>
       </form>
-    )
+    );
   }
 }
