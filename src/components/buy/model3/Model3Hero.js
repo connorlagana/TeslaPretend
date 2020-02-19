@@ -19,7 +19,22 @@ const performanceBlue =
 const performanceRed =
   "https://static-assets.tesla.com/configurator/compositor?&options=$W32D,$PPMR,$DV4W,$SLR1,$MT311,$IN3PB&view=STUD_3QTR&model=m3&size=1441&bkba_opt=1&version=v0027d202002181552&version=v0027d202002181552.jpg";
 
-import performanceModel3 from "../../../images/model3/performance/performanceModel3.png";
+const standardWhite18 =
+  "https://static-assets.tesla.com/configurator/compositor?&options=$W38B,$PPSW,$DV2W,$MT308,$IN3B2&view=STUD_3QTR&model=m3&size=1441&bkba_opt=1&version=v0027d202002181552&version=v0027d202002181552.jpg";
+const standardBlack18 =
+  "https://static-assets.tesla.com/configurator/compositor?&options=$W38B,$PBSB,$DV2W,$MT308,$IN3B2&view=STUD_3QTR&model=m3&size=1441&bkba_opt=1&version=v0027d202002181552&version=v0027d202002181552.jpg";
+const standardGray18 =
+  "https://static-assets.tesla.com/configurator/compositor?&options=$W38B,$PMNG,$DV2W,$MT308,$IN3B2&view=STUD_3QTR&model=m3&size=1441&bkba_opt=1&version=v0027d202002181552&version=v0027d202002181552.jpg";
+const standardBlue18 =
+  "https://static-assets.tesla.com/configurator/compositor?&options=$W38B,$PPSB,$DV2W,$MT308,$IN3B2&view=STUD_3QTR&model=m3&size=1441&bkba_opt=1&version=v0027d202002181552&version=v0027d202002181552.jpg";
+const standardRed18 =
+  "https://static-assets.tesla.com/configurator/compositor?&options=$W38B,$PPMR,$DV2W,$MT308,$IN3B2&view=STUD_3QTR&model=m3&size=1441&bkba_opt=1&version=v0027d202002181552&version=v0027d202002181552.jpg";
+
+const standardWhite19 = "";
+const standardBlack19 = "";
+const standardGray19 = "";
+const standardBlue19 = "";
+const standardRed19 = "";
 
 class Model3Hero extends Component {
   constructor(props) {
