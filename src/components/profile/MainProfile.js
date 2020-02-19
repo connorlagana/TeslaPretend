@@ -6,6 +6,7 @@ import {
   postGarage,
   putGarage,
   deleteGarage,
+  getCarsForGarage,
   verifyUser
 } from "../../services/api_helper.js";
 import ProfileGarages from "./ProfileGarages.js";
@@ -16,7 +17,8 @@ class MainProfile extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      garages: []
+      garages: [],
+      currentGarage: null
     };
   }
 
@@ -41,7 +43,17 @@ class MainProfile extends Component {
     this.setState({
       garages: [...this.state.garages, newGarage]
     });
-    this.props.history.push("/profile");
+    this.props.history.push("/garages");
+  };
+
+  getCars = async id => {
+    console.log(id);
+    const garageToLoad = await getCarsForGarage(id);
+
+    this.setState({
+      currentGarage: garageToLoad
+    });
+    console.log(this.state.currentGarage);
   };
 
   render() {
@@ -53,10 +65,6 @@ class MainProfile extends Component {
           path="/garages"
           render={() => <ProfileGarages garages={this.state.garages} />}
         />
-        <ProfileGarages
-          garages={this.state.garages}
-          handleDeleteGarage={this.handleDeleteGarage}
-        />
         <Route
           exact
           path="/garages/:id"
@@ -64,9 +72,11 @@ class MainProfile extends Component {
             <SingleGarage
               garageId={props.match.params.id}
               garages={this.state.garages}
+              getCars={this.getCars}
             />
           )}
         />
+
         <CreateGarageForm createGarage={this.createGarage} />
       </div>
     );

@@ -61,6 +61,12 @@ export const indexGarages = async () => {
   return resp.data;
 };
 
+// GET ALL GARAGES
+export const getCarsForGarage = async id => {
+  const resp = await api.get(`/garages/${id}/cars`);
+  return resp.data;
+};
+
 //POST THE GARAGES
 export const postGarage = async postData => {
   const resp = await api.post("/garages", postData);

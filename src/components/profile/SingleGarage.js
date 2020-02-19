@@ -11,19 +11,24 @@ export default class SingleGarage extends Component {
   }
 
   setCurrentGarage = () => {
+    console.log("got this far 1");
     const currentGarage = this.props.garages.find(
       garage => garage.id === parseInt(this.props.garageId)
     );
     this.setState({ currentGarage });
+    console.log("got this far 2");
   };
 
   componentDidMount() {
+    console.log("got this far 3");
     this.setCurrentGarage();
+    console.log(this.state);
   }
 
   componentDidUpdate(prevProps) {
     if (prevProps.garageId !== this.props.garageId) {
       this.setCurrentGarage();
+      this.props.getCars(this.state.currentGarage.id);
     }
   }
 

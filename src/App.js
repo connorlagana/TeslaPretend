@@ -4,6 +4,7 @@ import { Route, Switch, Redirect, withRouter } from "react-router-dom";
 import "./App.css";
 
 import FirstHomePage from "./components/homepage/FirstHomePage.js";
+import SingleGarage from "./components/profile/SingleGarage.js";
 import Model3Hero from "./components/buy/model3/Model3Hero.js";
 import Login from "./components/login/Login.js";
 import Register from "./components/login/Register";
@@ -11,11 +12,7 @@ import Model3Main from "./components/homepage/Model3Main.js";
 import Model3Exterior from "./components/buy/model3/Model3Exterior.js";
 import MainProfile from "./components/profile/MainProfile.js";
 
-import {
-  registerUser,
-  loginUser,
-  verifyUser,
-} from "./services/api_helper.js";
+import { registerUser, loginUser, verifyUser } from "./services/api_helper.js";
 
 class App extends Component {
   constructor(props) {
@@ -100,8 +97,8 @@ class App extends Component {
           render={() => <Register handleRegister={this.handleRegister} />}
         />
         <Route
-          exact
-          path="/profile"
+          // exact
+          path="/garages"
           render={() => (
             <MainProfile
               currentUser={this.state.currentUser}
@@ -109,6 +106,7 @@ class App extends Component {
             />
           )}
         />
+        
       </div>
     );
   }

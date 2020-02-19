@@ -21,6 +21,7 @@ class ProfileGarages extends Component {
   render() {
     return (
       <div>
+        <h1> Your Garages:</h1>
         {this.props.garages &&
           this.props.garages.map(garage => (
             <div key={garage.id}>

@@ -39,7 +39,7 @@ class NavBar extends Component {
         </div>
         <div className="rightNav">
           {this.props.currentUser ? (
-            <Link to="/Profile" className="navItem">
+            <Link to="/garages" className="navItem">
               {this.props.currentUser.name}
             </Link>
           ) : (
