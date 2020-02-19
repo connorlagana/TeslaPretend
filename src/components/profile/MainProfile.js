@@ -11,7 +11,8 @@ import {
 import ProfileGarages from "./ProfileGarages.js";
 import SingleGarage from "./SingleGarage.js";
 import CreateGarageForm from "./CreateGarageForm.js";
-import Model3Battery from "../buy/model3/Model3Battery.js"
+import Model3Battery from "../buy/model3/Model3Battery.js";
+import Model3Hero from "../buy/model3/Model3Hero.js";
 
 class MainProfile extends Component {
   constructor(props) {
@@ -49,7 +50,7 @@ class MainProfile extends Component {
   render() {
     return (
       <div>
-        <ProfileHeader createGarage={this.createGarage} />
+        {/* <ProfileHeader createGarage={this.createGarage} /> */}
         <Route
           exact
           path="/garages"
@@ -69,13 +70,7 @@ class MainProfile extends Component {
         <Route
           exact
           path="/garages/:id/design"
-          render={props => (
-            <Model3Battery
-              garageId={props.match.params.id}
-              garages={this.state.garages}
-              getCars={this.getCars}
-            />
-          )}
+          render={props => <Model3Hero />}
         />
 
         <CreateGarageForm createGarage={this.createGarage} />

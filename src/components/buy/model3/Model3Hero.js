@@ -1,6 +1,8 @@
 import React, { Component } from "react";
 import { Route, Switch, Redirect } from "react-router-dom";
 
+import { postCar } from "../../../services/api_helper.js";
+
 import Model3Battery from "./Model3Battery.js";
 import Model3Exterior from "./Model3Exterior.js";
 import Model3Header from "./Model3Header.js";
@@ -94,11 +96,15 @@ class Model3Hero extends Component {
     }
   };
 
+  addCarToGarage = (garageId, carData) => {
+    postCar(garageId, carData);
+  };
+
   render() {
     return (
       <div>
         <Model3Header />
-        <Route path="/battery">
+        <Route path="/">
           <Model3Battery
             pic={this.state.pic}
             range={this.state.range}
@@ -108,6 +114,7 @@ class Model3Hero extends Component {
             secondType={this.state.secondType}
             thirdType={this.state.thirdType}
             changeActiveButton={this.changeActiveButton}
+            addCarToGarage={this.addCarToGarage}
           />
         </Route>
         <Route path="/exterior">
@@ -116,7 +123,7 @@ class Model3Hero extends Component {
             changeActiveButtonColor={this.changeActiveButtonColor}
           />
         </Route>
-        <Model3Footer price={this.state.price} />
+        {/* <Model3Footer price={this.state.price} /> */}
       </div>
     );
   }

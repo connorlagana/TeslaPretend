@@ -18,7 +18,7 @@ export const loginUser = async loginData => {
 };
 
 //DELETE THE TODO
-export const deleteGarage = async (id) => {
+export const deleteGarage = async id => {
   const resp = await api.delete(`/garages/${id}`);
   return resp.data;
 };
@@ -70,6 +70,11 @@ export const getCarsForGarage = async id => {
 //POST THE GARAGES
 export const postGarage = async postData => {
   const resp = await api.post("/garages", postData);
+  return resp.data;
+};
+
+export const postCar = async (id, postData) => {
+  const resp = await api.post("/garages/:id/cars", postData);
   return resp.data;
 };
 

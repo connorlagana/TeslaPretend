@@ -29,7 +29,7 @@ class Model3Battery extends Component {
           <div className="rightModel3Hero">
             <div className="toggleSwitchClass">
               <h1>Select Your Car</h1>
-              <h6>TOGGLE HERE</h6>
+              {/* <h6>TOGGLE HERE</h6> */}
             </div>
             <div className="driveTypeDiv">
               <div className="rearWheelDiv">
@@ -70,6 +70,14 @@ class Model3Battery extends Component {
                   * Costs above include potential incentives and gas savings of
                   $6,300. <div id="learnMoreText">Learn More</div>
                 </div>
+                <button
+                  onClick={e => {
+                    e.preventDefault();
+                    this.props.addCarToGarage(this.props);
+                  }}
+                >
+                  Add Car
+                </button>
               </div>
             </div>
           </div>
