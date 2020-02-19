@@ -1,6 +1,7 @@
 import React, { Component } from "react";
+
 import { Link } from "react-router-dom";
-import { getCarsForGarage } from "../../services/api_helper.js";
+import { getCarsForGarage, putGarage } from "../../services/api_helper.js";
 
 export default class SingleGarage extends Component {
   constructor(props) {
@@ -9,9 +10,15 @@ export default class SingleGarage extends Component {
     this.state = {
       currentGarage: null,
       carsInTheGarage: [],
-      title: ""
+      obj: {
+        title: ""
+      }
     };
   }
+
+  updateGarageTitle = objTit => {
+    putGarage(this.state.currentGarage.id, objTit);
+  };
 
   setCurrentGarage = async () => {
     const currentGarage = this.props.garages.find(
@@ -47,7 +54,11 @@ export default class SingleGarage extends Component {
 
   handleChange = e => {
     const { name, value } = e.target;
-    this.setState({ [name]: value });
+    this.setState({
+      obj: {
+        title: value
+      }
+    });
     console.log(this.state);
   };
 
@@ -58,12 +69,18 @@ export default class SingleGarage extends Component {
       <div>
         {this.state.currentGarage && (
           <>
+            
             <h1>{this.state.currentGarage.title}</h1>
-            <form>
+            <form
+              onSubmit={e => {
+                e.preventDefault();
+                this.updateGarageTitle(this.state.obj);
+              }}
+            >
               <input
                 type="text"
                 name="title"
-                value={this.state.title}
+                value={this.state.obj.title}
                 onChange={this.handleChange}
               />
               <button onClick={this.updateGarageTitle}>
