@@ -18,8 +18,8 @@ export const loginUser = async loginData => {
 };
 
 //DELETE THE TODO
-export const deleteGarage = async (id, postData) => {
-  const resp = await api.delete(`/garages/${id}`, postData);
+export const deleteGarage = async (id) => {
+  const resp = await api.delete(`/garages/${id}`);
   return resp.data;
 };
 

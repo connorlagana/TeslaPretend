@@ -4,12 +4,15 @@ import { Link } from "react-router-dom";
 class ProfileGarages extends Component {
   constructor(props) {
     super(props);
+
+    
   }
 
   componentDidMount() {
     console.log(this.props.garages);
   }
 
+  
   // {this.props.garages.map((garage, key) => (
   //   <div className="garage" key={key}>
   //     {/* <Link to={`/${garage.ticker}`}> */}
@@ -31,6 +34,7 @@ class ProfileGarages extends Component {
               <button onClick={this.props.handleDeleteGarage}>
                 Delete {garage.title}
               </button>
+              
             </div>
           ))}
         <Link to="/garages/new">
