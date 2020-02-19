@@ -33,31 +33,32 @@ class Model3Exterior extends Component {
                   src={whitePng}
                   id="colorInd"
                   onClick={this.props.changeActiveButtonColor}
-                  value={0}
+                  value="White"
                 />
                 <img
                   src={redPng}
                   id="colorInd"
                   onClick={this.props.changeActiveButtonColor}
-                  value={1}
+                  value="Red"
                 />
                 <img
                   src={bluePng}
                   id="colorInd"
                   onClick={this.props.changeActiveButtonColor}
-                  value={2}
+                  value="Blue"
                 />
                 <img
                   src={blackPng}
                   id="colorInd"
                   onClick={this.props.changeActiveButtonColor}
-                  value={3}
+                  
+                  value="Black"
                 />
                 <img
                   src={grayPng}
                   id="colorInd"
                   onClick={this.props.changeActiveButtonColor}
-                  value={4}
+                  value="Gray"
                 />
               </div>
             </div>

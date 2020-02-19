@@ -47,7 +47,8 @@ class Model3Battery extends Component {
                 <button
                   className="typeButton"
                   id={this.props.firstType}
-                  value={0}
+                  value="Standard Range Plus"
+                  name="battery"
                   onClick={this.props.changeActiveButton}
                 >
                   <p>Standard Range Plus</p>
@@ -60,7 +61,8 @@ class Model3Battery extends Component {
                 <button
                   className="typeButton"
                   id={this.props.secondType}
-                  value={1}
+                  value="Long Range"
+                  name="battery"
                   onClick={this.props.changeActiveButton}
                 >
                   <p>Long Range</p>
@@ -69,7 +71,8 @@ class Model3Battery extends Component {
                 <button
                   className="typeButton"
                   id={this.props.thirdType}
-                  value={2}
+                  value="Performance"
+                  name="battery"
                   onClick={this.props.changeActiveButton}
                 >
                   <p>Performance</p>
@@ -83,36 +86,41 @@ class Model3Battery extends Component {
               <div>
                 <div id="selectColor">Select Color</div>
                 <div>
-                  <img
-                    src={whitePng}
-                    id="colorInd"
-                    onClick={this.props.changeActiveButtonColor}
-                    value={0}
-                  />
-                  <img
-                    src={redPng}
-                    id="colorInd"
-                    onClick={this.props.changeActiveButtonColor}
-                    value={1}
-                  />
-                  <img
-                    src={bluePng}
-                    id="colorInd"
-                    onClick={this.props.changeActiveButtonColor}
-                    value={2}
-                  />
-                  <img
-                    src={blackPng}
-                    id="colorInd"
-                    onClick={this.props.changeActiveButtonColor}
-                    value={3}
-                  />
-                  <img
-                    src={grayPng}
-                    id="colorInd"
-                    onClick={this.props.changeActiveButtonColor}
-                    value={4}
-                  />
+                  <button
+                    onClick={this.props.changeActiveButton}
+                    value="White"
+                    name="color"
+                  >
+                    <img src={whitePng} id="colorInd" />
+                  </button>
+                  <button
+                    onClick={this.props.changeActiveButton}
+                    value="Red"
+                    name="color"
+                  >
+                    <img src={redPng} id="colorInd" />
+                  </button>
+                  <button
+                    onClick={this.props.changeActiveButton}
+                    value="Blue"
+                    name="color"
+                  >
+                    <img src={bluePng} id="colorInd" />
+                  </button>
+                  <button
+                    onClick={this.props.changeActiveButton}
+                    value="Black"
+                    name="color"
+                  >
+                    <img src={blackPng} id="colorInd" />
+                  </button>
+                  <button
+                    onClick={this.props.changeActiveButton}
+                    value="Gray"
+                    name="color"
+                  >
+                    <img src={grayPng} id="colorInd" />
+                  </button>
                 </div>
               </div>
               <div id="dividerDivExterior" />

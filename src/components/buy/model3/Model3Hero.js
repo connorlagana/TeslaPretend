@@ -30,121 +30,73 @@ const standardBlue18 =
 const standardRed18 =
   "https://static-assets.tesla.com/configurator/compositor?&options=$W38B,$PPMR,$DV2W,$MT308,$IN3B2&view=STUD_3QTR&model=m3&size=1441&bkba_opt=1&version=v0027d202002181552&version=v0027d202002181552.jpg";
 
-const standardWhite19 = "";
-const standardBlack19 = "";
-const standardGray19 = "";
-const standardBlue19 = "";
-const standardRed19 = "";
+const standardWhite19 =
+  "https://static-assets.tesla.com/configurator/compositor?&options=$W39B,$PPSW,$DV2W,$MT308,$IN3B2&view=STUD_3QTR&model=m3&size=1441&bkba_opt=1&version=v0027d202002181552&version=v0027d202002181552.jpg";
+const standardBlack19 =
+  "https://static-assets.tesla.com/configurator/compositor?&options=$W39B,$PBSB,$DV2W,$MT308,$IN3B2&view=STUD_3QTR&model=m3&size=1441&bkba_opt=1&version=v0027d202002181552&version=v0027d202002181552.jpg";
+const standardGray19 =
+  "https://static-assets.tesla.com/configurator/compositor?&options=$W39B,$PMNG,$DV2W,$MT308,$IN3B2&view=STUD_3QTR&model=m3&size=1441&bkba_opt=1&version=v0027d202002181552&version=v0027d202002181552.jpg";
+const standardBlue19 =
+  "https://static-assets.tesla.com/configurator/compositor?&options=$W39B,$PPSB,$DV2W,$MT308,$IN3B2&view=STUD_3QTR&model=m3&size=1441&bkba_opt=1&version=v0027d202002181552&version=v0027d202002181552.jpg";
+const standardRed19 =
+  "https://static-assets.tesla.com/configurator/compositor?&options=$W39B,$PPMR,$DV2W,$MT308,$IN3B2&view=STUD_3QTR&model=m3&size=1441&bkba_opt=1&version=v0027d202002181552&version=v0027d202002181552.jpg";
 
 class Model3Hero extends Component {
   constructor(props) {
     super(props);
 
     this.state = {
-      obj: {
-        name: "Con's Car",
-        battery: "Long Range",
-        color: "Blue",
-        interior: "Black",
-        wheel: "19 inch",
-        autopilot: true,
-        price: 39990,
-        image: ""
-      }
+      name: "name",
+      battery: "S",
+      color: "White",
+      interior: "Black",
+      wheel: "18 inch",
+      autopilot: true,
+      price: 39990,
+      image: standardWhite18,
+      range: 250,
+      topSpeed: 140,
+      ohSix: 5.3
     };
   }
 
-  changeActiveButton = async e => {
-    console.log(this.props.garageId);
-    await this.setState({
-      selectedBattery: e.target.value
-    });
-    if (this.state.selectedBattery == 0) {
+  changeStateFromButton = async e => {
+    const { name, value } = e.target;
+    await this.setState({ [name]: value });
+    console.log(this.state, name, value);
+    if (this.state.battery === "Standard Range Plus") {
       this.setState({
-        image:
-          "https://static-assets.tesla.com/configurator/compositor?&options=$W38B,$PPSW,$DV2W,$MT308,$IN3B2&view=STUD_3QTR&model=m3&size=1441&bkba_opt=1&version=v0027d202002181552&version=v0027d202002181552.jpg",
-
-        name: "Con's Car",
-        battery: "Standard Range Plus",
-        color: "Blue",
-        interior: "Black",
-        wheel: "19 inch",
-        autopilot: true,
-        price: 39990,
-        image: ""
+        range: 250,
+        topSpeed: 140,
+        ohSix: 5.3,
+        price: 39990
       });
-    } else if (this.state.selectedBattery == 1) {
+
+      if (this.state.color === "White") {
+        if (this.state.wheel === "18") {
+          
+        }
+      }
+    } else if (this.state.battery === "Long Range") {
       this.setState({
-        image: regularWhiteModel3,
-        price: 48990,
         range: 322,
         topSpeed: 145,
         ohSix: 4.4,
-        firstType: "",
-        secondType: "activate",
-        thirdType: "",
-        obj: {
-          name: "Con's Car",
-          battery: "Long Range",
-          color: "Blue",
-          interior: "Black",
-          wheel: "19 inch",
-          autopilot: true,
-          price: 48990,
-          image:
-            "https://static-assets.tesla.com/configurator/compositor?&options=$W39B,$PPSW,$DV4W,$MT310,$IN3PB&view=STUD_3QTR&model=m3&size=1441&bkba_opt=1&version=v0027d202002181552&version=v0027d202002181552.jpg"
-        }
+        price: 48990
       });
-    } else if (this.state.selectedBattery == 2) {
+    } else if (this.state.battery === "Performance") {
       this.setState({
-        image: performanceModel3,
-        price: 56990,
         range: 299,
         topSpeed: 162,
         ohSix: 3.2,
-        firstType: "",
-        secondType: "",
-        thirdType: "activate",
-        interior: "",
-        exterior: "",
-        obj: {
-          name: "Con's Car",
-          battery: "Performance",
-          color: "Blue",
-          interior: "Black",
-          wheel: "19 inch",
-          autopilot: true,
-          price: 56990,
-          image:
-            "https://static-assets.tesla.com/configurator/compositor?&options=$W32D,$PPSW,$DV4W,$SLR1,$MT311,$IN3PB&view=STUD_3QTR&model=m3&size=1441&bkba_opt=1&version=v0027d202002181552&version=v0027d202002181552"
-        }
-      });
-    }
-  };
-
-  changeActiveButtonColor = async e => {
-    await this.setState({
-      selectedColor: e.target.value
-    });
-    console.log();
-    if (this.state.selectedColor == 0 && this.state.selectedBattery <= 1) {
-      this.setState({
-        image: regularWhiteModel3,
-        price: 39990
-      });
-    } else if (
-      this.state.selectedColor == 1 &&
-      this.state.selectedBattery <= 1
-    ) {
-      this.setState({
-        image: regularBlackModel3,
-        price: 39990
+        price: 56990
       });
     }
   };
 
   addCarToGarage = () => {
-    postCar(this.state.garageId, this.state.obj);
+    console.log("hola");
+    postCar(this.props.garageId, this.state);
     console.log(this.state);
   };
 
@@ -161,14 +113,14 @@ class Model3Hero extends Component {
             firstType={this.state.firstType}
             secondType={this.state.secondType}
             thirdType={this.state.thirdType}
-            changeActiveButton={this.changeActiveButton}
+            changeActiveButton={this.changeStateFromButton}
             addCarToGarage={this.addCarToGarage}
           />
         </Route>
         <Route path="/exterior">
           <Model3Exterior
             image={this.state.image}
-            changeActiveButtonColor={this.changeActiveButtonColor}
+            changeActiveButtonColor={this.changeStateFromButton}
           />
         </Route>
         {/* <Model3Footer price={this.state.price} /> */}
