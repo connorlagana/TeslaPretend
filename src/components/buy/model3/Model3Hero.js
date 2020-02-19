@@ -20,7 +20,7 @@ class Model3Hero extends Component {
     super(props);
 
     this.state = {
-      pic: regularWhiteModel3,
+      image: regularWhiteModel3,
       selectedBattery: 0,
       selectedColor: 0,
       price: 39990,
@@ -29,39 +29,71 @@ class Model3Hero extends Component {
       ohSix: 5.3,
       firstType: "activate",
       secondType: "",
-      thirdType: ""
+      thirdType: "",
+      garageId: this.props.garageId,
+      obj: {
+        name: "Con's Car",
+        battery: "Long Range",
+        color: "Blue",
+        interior: "Black",
+        wheel: "19 inch",
+        autopilot: true,
+        price: 39990,
+        image: "other.com"
+      }
     };
   }
 
   changeActiveButton = async e => {
+    console.log(this.props.garageId);
     await this.setState({
       selectedBattery: e.target.value
     });
     if (this.state.selectedBattery == 0) {
       this.setState({
-        pic: regularWhiteModel3,
+        image: regularWhiteModel3,
         price: 39990,
         range: 250,
         topSpeed: 140,
         ohSix: 5.3,
         firstType: "activate",
         secondType: "",
-        thirdType: ""
+        thirdType: "",
+        obj: {
+          name: "Con's Car",
+          battery: "Standard Range Plus",
+          color: "Blue",
+          interior: "Black",
+          wheel: "19 inch",
+          autopilot: true,
+          price: 39990,
+          image: "other.com"
+        }
       });
     } else if (this.state.selectedBattery == 1) {
       this.setState({
-        pic: regularWhiteModel3,
+        image: regularWhiteModel3,
         price: 48990,
         range: 322,
         topSpeed: 145,
         ohSix: 4.4,
         firstType: "",
         secondType: "activate",
-        thirdType: ""
+        thirdType: "",
+        obj: {
+          name: "Con's Car",
+          battery: "Long Range",
+          color: "Blue",
+          interior: "Black",
+          wheel: "19 inch",
+          autopilot: true,
+          price: 48990,
+          image: "other.com"
+        }
       });
     } else if (this.state.selectedBattery == 2) {
       this.setState({
-        pic: performanceModel3,
+        image: performanceModel3,
         price: 56990,
         range: 299,
         topSpeed: 162,
@@ -70,7 +102,17 @@ class Model3Hero extends Component {
         secondType: "",
         thirdType: "activate",
         interior: "",
-        exterior: ""
+        exterior: "",
+        obj: {
+          name: "Con's Car",
+          battery: "Performance",
+          color: "Blue",
+          interior: "Black",
+          wheel: "19 inch",
+          autopilot: true,
+          price: 56990,
+          image: "other.com"
+        }
       });
     }
   };
@@ -82,7 +124,7 @@ class Model3Hero extends Component {
     console.log();
     if (this.state.selectedColor == 0 && this.state.selectedBattery <= 1) {
       this.setState({
-        pic: regularWhiteModel3,
+        image: regularWhiteModel3,
         price: 39990
       });
     } else if (
@@ -90,14 +132,15 @@ class Model3Hero extends Component {
       this.state.selectedBattery <= 1
     ) {
       this.setState({
-        pic: regularBlackModel3,
+        image: regularBlackModel3,
         price: 39990
       });
     }
   };
 
-  addCarToGarage = (garageId, carData) => {
-    postCar(garageId, carData);
+  addCarToGarage = () => {
+    postCar(this.state.garageId, this.state.obj);
+    console.log(this.state);
   };
 
   render() {
@@ -106,7 +149,7 @@ class Model3Hero extends Component {
         <Model3Header />
         <Route path="/">
           <Model3Battery
-            pic={this.state.pic}
+            pic={this.state.image}
             range={this.state.range}
             topSpeed={this.state.topSpeed}
             ohSix={this.state.ohSix}
@@ -119,7 +162,7 @@ class Model3Hero extends Component {
         </Route>
         <Route path="/exterior">
           <Model3Exterior
-            pic={this.state.pic}
+            image={this.state.image}
             changeActiveButtonColor={this.changeActiveButtonColor}
           />
         </Route>

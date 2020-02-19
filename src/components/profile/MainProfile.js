@@ -70,7 +70,7 @@ class MainProfile extends Component {
         <Route
           exact
           path="/garages/:id/design"
-          render={props => <Model3Hero />}
+          render={props => <Model3Hero garageId={props.match.params.id} />}
         />
 
         <CreateGarageForm createGarage={this.createGarage} />

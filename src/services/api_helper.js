@@ -74,7 +74,7 @@ export const postGarage = async postData => {
 };
 
 export const postCar = async (id, postData) => {
-  const resp = await api.post("/garages/:id/cars", postData);
+  const resp = await api.post(`/garages/${id}/cars`, postData);
   return resp.data;
 };
 
