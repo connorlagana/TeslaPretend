@@ -29,10 +29,6 @@ class Model3Battery extends Component {
           <div className="rightModel3Hero">
             <div className="toggleSwitchClass">
               <h1>Select Your Car</h1>
-              {/* <label className="switch">
-            <input type="checkbox" focu />
-            <span className="slider round"></span>
-          </label> */}
               <h6>TOGGLE HERE</h6>
             </div>
             <div className="driveTypeDiv">
