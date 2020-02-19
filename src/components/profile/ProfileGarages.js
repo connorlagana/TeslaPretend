@@ -30,7 +30,7 @@ class ProfileGarages extends Component {
               <Link id="linkDivGarage" to={`/garages/${garage.id}`}>
                 <div id="garageTitleList">{garage.title}</div>
               </Link>
-              <button onClick={this.props.handleDeleteGarage}>
+              <button id="deleteGarage" onClick={this.props.handleDeleteGarage}>
                 Delete {garage.title}
               </button>
             </div>

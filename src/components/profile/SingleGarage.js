@@ -69,8 +69,10 @@ export default class SingleGarage extends Component {
       <div>
         {this.state.currentGarage && (
           <>
-            
             <h1>{this.state.currentGarage.title}</h1>
+            <Link to={`/garages/${this.state.currentGarage.id}/design`}>
+              <button>Add a Car</button>
+            </Link>
             <form
               onSubmit={e => {
                 e.preventDefault();

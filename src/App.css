@@ -993,6 +993,7 @@ input:checked + .slider:before {
   background-color: rgb(182, 182, 182);
   margin-bottom: 1vh;
   text-align: center;
+  font-family: "Montserrat", sans-serif;
 }
 
 #garageIndy img {
@@ -1003,14 +1004,33 @@ input:checked + .slider:before {
   margin: 1vh;
 }
 
-#garageIndy button {
+#deleteGarage {
   width: 20vw;
+  height: 6vh;
+  font-size: 2vh;
+  border-radius: 2vh;
+  box-shadow: none;
+  border: solid;
+  border-color: black;
+  background-color: white;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+
+#deleteGarage:hover {
+  background-color: black;
+  color: white;
 }
 
 #linkDivGarage {
-  background-color: aqua;
   height: 18vh;
   width: 30vw;
   margin-left: 10vw;
   margin-right: 10vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: black;
+  font-size: 2.4vh;
+  text-decoration: none;
 }
