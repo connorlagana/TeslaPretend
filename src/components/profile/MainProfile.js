@@ -6,7 +6,6 @@ import {
   postGarage,
   putGarage,
   deleteGarage,
-  getCarsForGarage,
   verifyUser
 } from "../../services/api_helper.js";
 import ProfileGarages from "./ProfileGarages.js";
@@ -44,16 +43,6 @@ class MainProfile extends Component {
       garages: [...this.state.garages, newGarage]
     });
     this.props.history.push("/garages");
-  };
-
-  getCars = async id => {
-    console.log(id);
-    const garageToLoad = await getCarsForGarage(id);
-
-    this.setState({
-      currentGarage: garageToLoad
-    });
-    console.log(this.state.currentGarage);
   };
 
   render() {

@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import { Link } from "react-router-dom";
+import { getCarsForGarage } from "../../services/api_helper.js";
 
 export default class SingleGarage extends Component {
   constructor(props) {
@@ -11,21 +12,29 @@ export default class SingleGarage extends Component {
   }
 
   setCurrentGarage = () => {
-    console.log("got this far 1");
     const currentGarage = this.props.garages.find(
       garage => garage.id === parseInt(this.props.garageId)
     );
     this.setState({ currentGarage });
-    console.log("got this far 2");
   };
 
-  componentDidMount() {
-    console.log("got this far 3");
-    this.setCurrentGarage();
+  getCars = async id => {
+    console.log(id);
+    const garageToLoad = await getCarsForGarage(id);
+
+    this.setState({
+      currentGarage: garageToLoad
+    });
+    console.log(this.state.currentGarage);
+  };
+
+  async componentDidMount() {
+    await this.setCurrentGarage();
     console.log(this.state);
   }
 
   componentDidUpdate(prevProps) {
+    console.log(this.state, "updated");
     if (prevProps.garageId !== this.props.garageId) {
       this.setCurrentGarage();
       this.props.getCars(this.state.currentGarage.id);
