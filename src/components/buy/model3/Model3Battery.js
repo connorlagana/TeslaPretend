@@ -12,24 +12,6 @@ class Model3Battery extends Component {
             <div id="leftModel3Bottom">
               <div id="rangeDiv">
                 <h1>{this.props.range}mi</h1>
-                {/* <div id="digitsToChange">
-                  <div>
-                    <span class="animate" id="digit1">
-                      1 2 3 4 5 6 7 8 9 0
-                    </span>
-                  </div>
-                  <div>
-                    <span class="animate" id="digit2">
-                      1 2 3 4 5 6 7 8 9 0
-                    </span>
-                  </div>
-                  <div>
-                    <span class="animate" id="digit0">
-                      1 2 3 4 5 6 7 8 9 0
-                    </span>
-                  </div>
-                  <div>mi</div>
-                </div> */}
                 <p>Range</p>
               </div>
               <div id="dividerDiv" />
