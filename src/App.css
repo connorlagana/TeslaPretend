@@ -984,3 +984,33 @@ input:checked + .slider:before {
   font-size: 2.2vh;
   cursor: pointer;
 }
+
+#garageIndy {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+  background-color: rgb(182, 182, 182);
+  margin-bottom: 1vh;
+  text-align: center;
+}
+
+#garageIndy img {
+  height: 18vh;
+  width: 18vh;
+  object-fit: cover;
+  border-radius: 50%;
+  margin: 1vh;
+}
+
+#garageIndy button {
+  width: 20vw;
+}
+
+#linkDivGarage {
+  background-color: aqua;
+  height: 18vh;
+  width: 30vw;
+  margin-left: 10vw;
+  margin-right: 10vw;
+}

@@ -27,8 +27,8 @@ class ProfileGarages extends Component {
           this.props.garages.map(garage => (
             <div key={garage.id} id="garageIndy">
               <img src={garagePic} />
-              <Link to={`/garages/${garage.id}`}>
-                <h3>{garage.title}</h3>
+              <Link id="linkDivGarage" to={`/garages/${garage.id}`}>
+                <div id="garageTitleList">{garage.title}</div>
               </Link>
               <button onClick={this.props.handleDeleteGarage}>
                 Delete {garage.title}
