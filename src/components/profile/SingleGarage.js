@@ -1,7 +1,11 @@
 import React, { Component } from "react";
 
 import { Link } from "react-router-dom";
-import { getCarsForGarage, putGarage } from "../../services/api_helper.js";
+import {
+  getCarsForGarage,
+  putGarage,
+  deleteCar
+} from "../../services/api_helper.js";
 
 export default class SingleGarage extends Component {
   constructor(props) {
@@ -37,6 +41,11 @@ export default class SingleGarage extends Component {
     this.setState({
       carsInTheGarage: carsToDisplay
     });
+  };
+
+  deleteComment = async (e, carId) => {
+    e.preventDefault();
+    await deleteCar(this.state.currentGarage.id, carId);
   };
 
   async componentDidMount() {
@@ -95,36 +104,38 @@ export default class SingleGarage extends Component {
             {this.state.carsInTheGarage &&
               this.state.carsInTheGarage.map(car => (
                 <div className="carIndy" key={car.id}>
-                  <div>
-                    <div>Name:</div>
-                    <div>{car.name}</div>
+                  <div className="carIndyUnit">
+                    <img id="garageCarImage" src={car.image} />
                   </div>
-                  <div>
+                  <div className="carIndyUnit">
+                    <div>Model:</div>
+                    <div>Model 3</div>
+                  </div>
+                  <div className="carIndyUnit">
                     <div>Battery:</div>
                     <div>{car.battery}</div>
                   </div>
-                  <div>
+                  <div className="carIndyUnit">
                     <div>Color:</div>
                     <div>{car.color}</div>
                   </div>
-                  <div>
+                  {/* <div className="carIndyUnit">
                     <div>Interior:</div>
                     <div>{car.interior}</div>
-                  </div>
-                  <div>
+                  </div> */}
+                  <div className="carIndyUnit">
                     <div>Wheels:</div>
                     <div>{car.wheel}</div>
                   </div>
-                  <div>
-                    <div>Autopilot:</div>
-                    <div>{car.autopilot}</div>
-                  </div>
-                  <div>
+
+                  <div className="carIndyUnit">
                     <div>Price:</div>
                     <div>{car.price}</div>
                   </div>
 
-                  <button>Delete {car.name}</button>
+                  <button onClick={e => this.deleteComment(e, car.id)}>
+                    Delete {car.id}
+                  </button>
                 </div>
               ))}
           </>

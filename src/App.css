@@ -1043,3 +1043,15 @@ input:checked + .slider:before {
   flex-direction: row;
   margin-bottom: 2vh;
 }
+
+.carIndyUnit {
+  /* background-color: antiquewhite; */
+  color: black;
+  font-size: 2vh;
+  width: 10vw;
+}
+
+#garageCarImage {
+  height: 10vh;
+  width: 16vh;
+}

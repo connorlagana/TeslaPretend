@@ -7,11 +7,17 @@ import Model3Battery from "./Model3Battery.js";
 import Model3Exterior from "./Model3Exterior.js";
 import Model3Header from "./Model3Header.js";
 import Model3Footer from "./Model3Footer.js";
-import regularWhiteModel3 from "../../../images/model3/regular/regularWhiteModel3.png";
-import regularBlackModel3 from "../../../images/model3/regular/regularBlackModel3.png";
-import regularBlueModel3 from "../../../images/model3/regular/regularBlueModel3.png";
-import regularRedModel3 from "../../../images/model3/regular/regularRedModel3.png";
-import regularGrayModel3 from "../../../images/model3/regular/regularGrayModel3.png";
+
+const performanceWhite =
+  "https://static-assets.tesla.com/configurator/compositor?&options=$W32D,$PPSW,$DV4W,$SLR1,$MT311,$IN3PB&view=STUD_3QTR&model=m3&size=1441&bkba_opt=1&version=v0027d202002181552&version=v0027d202002181552.jpg";
+const performanceBlack =
+  "https://static-assets.tesla.com/configurator/compositor?&options=$W32D,$PBSB,$DV4W,$SLR1,$MT311,$IN3PB&view=STUD_3QTR&model=m3&size=1441&bkba_opt=1&version=v0027d202002181552&version=v0027d202002181552.jpg";
+const performanceGray =
+  "https://static-assets.tesla.com/configurator/compositor?&options=$W32D,$PMNG,$DV4W,$SLR1,$MT311,$IN3PB&view=STUD_3QTR&model=m3&size=1441&bkba_opt=1&version=v0027d202002181552&version=v0027d202002181552.jpg";
+const performanceBlue =
+  "https://static-assets.tesla.com/configurator/compositor?&options=$W32D,$PPSB,$DV4W,$SLR1,$MT311,$IN3PB&view=STUD_3QTR&model=m3&size=1441&bkba_opt=1&version=v0027d202002181552&version=v0027d202002181552.jpg";
+const performanceRed =
+  "https://static-assets.tesla.com/configurator/compositor?&options=$W32D,$PPMR,$DV4W,$SLR1,$MT311,$IN3PB&view=STUD_3QTR&model=m3&size=1441&bkba_opt=1&version=v0027d202002181552&version=v0027d202002181552.jpg";
 
 import performanceModel3 from "../../../images/model3/performance/performanceModel3.png";
 
@@ -20,17 +26,6 @@ class Model3Hero extends Component {
     super(props);
 
     this.state = {
-      image: regularWhiteModel3,
-      selectedBattery: 0,
-      selectedColor: 0,
-      price: 39990,
-      range: 250,
-      topSpeed: 140,
-      ohSix: 5.3,
-      firstType: "activate",
-      secondType: "",
-      thirdType: "",
-      garageId: this.props.garageId,
       obj: {
         name: "Con's Car",
         battery: "Long Range",
@@ -51,25 +46,17 @@ class Model3Hero extends Component {
     });
     if (this.state.selectedBattery == 0) {
       this.setState({
-        image: regularWhiteModel3,
+        image:
+          "https://static-assets.tesla.com/configurator/compositor?&options=$W38B,$PPSW,$DV2W,$MT308,$IN3B2&view=STUD_3QTR&model=m3&size=1441&bkba_opt=1&version=v0027d202002181552&version=v0027d202002181552.jpg",
+
+        name: "Con's Car",
+        battery: "Standard Range Plus",
+        color: "Blue",
+        interior: "Black",
+        wheel: "19 inch",
+        autopilot: true,
         price: 39990,
-        range: 250,
-        topSpeed: 140,
-        ohSix: 5.3,
-        firstType: "activate",
-        secondType: "",
-        thirdType: "",
-        obj: {
-          name: "Con's Car",
-          battery: "Standard Range Plus",
-          color: "Blue",
-          interior: "Black",
-          wheel: "19 inch",
-          autopilot: true,
-          price: 39990,
-          image:
-            "https://static-assets.tesla.com/configurator/compositor?&options=$W38B,$PPSW,$DV2W,$MT308,$IN3B2&view=STUD_3QTR&model=m3&size=1441&bkba_opt=1&version=v0027d202002181552&version=v0027d202002181552.jpg"
-        }
+        image: ""
       });
     } else if (this.state.selectedBattery == 1) {
       this.setState({
