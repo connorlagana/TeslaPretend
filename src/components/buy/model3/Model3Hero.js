@@ -130,6 +130,58 @@ class Model3Hero extends Component {
         ohSix: 4.4,
         price: 48990
       });
+
+      if (this.state.color === "White") {
+        if (this.state.wheel === "18") {
+          this.setState({
+            image: standardWhite18
+          });
+        } else if (this.state.wheel === "19") {
+          this.setState({
+            image: standardWhite19
+          });
+        }
+      } else if (this.state.color === "Black") {
+        if (this.state.wheel === "18") {
+          this.setState({
+            image: standardBlack18
+          });
+        } else if (this.state.wheel === "19") {
+          this.setState({
+            image: standardBlack19
+          });
+        }
+      } else if (this.state.color === "Red") {
+        if (this.state.wheel === "18") {
+          this.setState({
+            image: standardRed18
+          });
+        } else if (this.state.wheel === "19") {
+          this.setState({
+            image: standardRed19
+          });
+        }
+      } else if (this.state.color === "Gray") {
+        if (this.state.wheel === "18") {
+          this.setState({
+            image: standardGray18
+          });
+        } else if (this.state.wheel === "19") {
+          this.setState({
+            image: standardGray19
+          });
+        }
+      } else if (this.state.color === "Blue") {
+        if (this.state.wheel === "18") {
+          this.setState({
+            image: standardBlue18
+          });
+        } else if (this.state.wheel === "19") {
+          this.setState({
+            image: standardBlue19
+          });
+        }
+      }
     } else if (this.state.battery === "Performance") {
       this.setState({
         range: 299,
@@ -137,6 +189,68 @@ class Model3Hero extends Component {
         ohSix: 3.2,
         price: 56990
       });
+
+      if (this.state.color === "White") {
+        if (this.state.wheel === "18") {
+          this.setState({
+            image: performanceWhite,
+            wheel: "20"
+          });
+        } else if (this.state.wheel === "19") {
+          this.setState({
+            image: performanceWhite,
+            wheel: "20"
+          });
+        }
+      } else if (this.state.color === "Black") {
+        if (this.state.wheel === "18") {
+          this.setState({
+            image: performanceBlack,
+            wheel: "20"
+          });
+        } else if (this.state.wheel === "19") {
+          this.setState({
+            image: performanceBlack,
+            wheel: "20"
+          });
+        }
+      } else if (this.state.color === "Red") {
+        if (this.state.wheel === "18") {
+          this.setState({
+            image: performanceRed,
+            wheel: "20"
+          });
+        } else if (this.state.wheel === "19") {
+          this.setState({
+            image: performanceRed,
+            wheel: "20"
+          });
+        }
+      } else if (this.state.color === "Gray") {
+        if (this.state.wheel === "18") {
+          this.setState({
+            image: performanceGray,
+            wheel: "20"
+          });
+        } else if (this.state.wheel === "19") {
+          this.setState({
+            image: performanceGray,
+            wheel: "20"
+          });
+        }
+      } else if (this.state.color === "Blue") {
+        if (this.state.wheel === "18") {
+          this.setState({
+            image: performanceBlue,
+            wheel: "20"
+          });
+        } else if (this.state.wheel === "19") {
+          this.setState({
+            image: performanceBlue,
+            wheel: "20"
+          });
+        }
+      }
     }
   };
 
