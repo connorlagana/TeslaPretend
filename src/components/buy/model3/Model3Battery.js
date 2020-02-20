@@ -127,8 +127,20 @@ class Model3Battery extends Component {
               <div className="wheelsModel3Div">
                 <div id="selectColor">Select Wheels</div>
                 <div>
-                  <img src={defaultTire} id="colorInd" />
-                  <img src={premiumTire} id="colorInd" />
+                  <button
+                    onClick={this.props.changeActiveButton}
+                    value="18"
+                    name="wheel"
+                  >
+                    <img src={defaultTire} id="colorInd" />
+                  </button>
+                  <button
+                    onClick={this.props.changeActiveButton}
+                    value="19"
+                    name="wheel"
+                  >
+                    <img src={premiumTire} id="colorInd" />
+                  </button>
                 </div>
               </div>
             </div>

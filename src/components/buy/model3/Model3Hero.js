@@ -47,10 +47,10 @@ class Model3Hero extends Component {
 
     this.state = {
       name: "name",
-      battery: "S",
+      battery: "Standard Range Plus",
       color: "White",
       interior: "Black",
-      wheel: "18 inch",
+      wheel: "18",
       autopilot: true,
       price: 39990,
       image: standardWhite18,
@@ -74,7 +74,53 @@ class Model3Hero extends Component {
 
       if (this.state.color === "White") {
         if (this.state.wheel === "18") {
-          
+          this.setState({
+            image: standardWhite18
+          });
+        } else if (this.state.wheel === "19") {
+          this.setState({
+            image: standardWhite19
+          });
+        }
+      } else if (this.state.color === "Black") {
+        if (this.state.wheel === "18") {
+          this.setState({
+            image: standardBlack18
+          });
+        } else if (this.state.wheel === "19") {
+          this.setState({
+            image: standardBlack19
+          });
+        }
+      } else if (this.state.color === "Red") {
+        if (this.state.wheel === "18") {
+          this.setState({
+            image: standardRed18
+          });
+        } else if (this.state.wheel === "19") {
+          this.setState({
+            image: standardRed19
+          });
+        }
+      } else if (this.state.color === "Gray") {
+        if (this.state.wheel === "18") {
+          this.setState({
+            image: standardGray18
+          });
+        } else if (this.state.wheel === "19") {
+          this.setState({
+            image: standardGray19
+          });
+        }
+      } else if (this.state.color === "Blue") {
+        if (this.state.wheel === "18") {
+          this.setState({
+            image: standardBlue18
+          });
+        } else if (this.state.wheel === "19") {
+          this.setState({
+            image: standardBlue19
+          });
         }
       }
     } else if (this.state.battery === "Long Range") {
