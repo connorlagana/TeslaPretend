@@ -201,6 +201,11 @@ class Model3Hero extends Component {
             image: performanceWhite,
             wheel: "20"
           });
+        } else if (this.state.wheel === "20") {
+          this.setState({
+            image: performanceWhite,
+            wheel: "20"
+          });
         }
       } else if (this.state.color === "Black") {
         if (this.state.wheel === "18") {
@@ -209,6 +214,11 @@ class Model3Hero extends Component {
             wheel: "20"
           });
         } else if (this.state.wheel === "19") {
+          this.setState({
+            image: performanceBlack,
+            wheel: "20"
+          });
+        } else if (this.state.wheel === "20") {
           this.setState({
             image: performanceBlack,
             wheel: "20"
@@ -225,6 +235,11 @@ class Model3Hero extends Component {
             image: performanceRed,
             wheel: "20"
           });
+        } else if (this.state.wheel === "20") {
+          this.setState({
+            image: performanceRed,
+            wheel: "20"
+          });
         }
       } else if (this.state.color === "Gray") {
         if (this.state.wheel === "18") {
@@ -237,6 +252,11 @@ class Model3Hero extends Component {
             image: performanceGray,
             wheel: "20"
           });
+        } else if (this.state.wheel === "20") {
+          this.setState({
+            image: performanceGray,
+            wheel: "20"
+          });
         }
       } else if (this.state.color === "Blue") {
         if (this.state.wheel === "18") {
@@ -245,6 +265,11 @@ class Model3Hero extends Component {
             wheel: "20"
           });
         } else if (this.state.wheel === "19") {
+          this.setState({
+            image: performanceBlue,
+            wheel: "20"
+          });
+        } else if (this.state.wheel === "20") {
           this.setState({
             image: performanceBlue,
             wheel: "20"
