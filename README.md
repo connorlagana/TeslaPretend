@@ -1,8 +1,8 @@
-# **PretendTesla™**
+# **TeslaPretend™**
 
 ### Overview
 
-**PretendTesla™** is the official unofficial mock Tesla website used to buy Tesla cars! **PretendTesla™** will use a ruby on rails backend server to add, update, and delete existing cars from your list.
+**TeslaPretend™** is the official unofficial mock Tesla website used to buy Tesla cars! **TeslaPretend™** will use a ruby on rails backend server to add, update, and delete existing cars from your list.
 
 ![Elon](https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fwww.fearlessmotivation.com%2Fwp-content%2Fuploads%2F2017%2F06%2Felon-quotes-fb.jpg&f=1&nofb=1)
 
@@ -54,7 +54,7 @@ src
 
 ### MVP
 
-\_The **PretendTesla™** MVP is accessing a Ruby on Rails backend and displaying access to customized cars that a logged in user selects from.
+\_The **TeslaPretend™** MVP is accessing a Ruby on Rails backend and displaying access to customized cars that a logged in user selects from.
 
 #### Goals
 
